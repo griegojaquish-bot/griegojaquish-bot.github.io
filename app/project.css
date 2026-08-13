@@ -1,0 +1,83 @@
+.projectCard{color:#fff;text-decoration:none;background-position:center;background-size:cover;transition:background-size .5s}.projectCard:nth-child(1){background-image:url('/product-site-office.webp')}.projectCard:nth-child(2){background-image:url('/product-flat-pack.webp')}.projectCard:nth-child(3){background-image:url('/project-cultural-tourism.jpg')}.projectCard:before{inset:0;transform:none;background:linear-gradient(180deg,rgba(11,20,16,.02) 25%,rgba(11,20,16,.82));opacity:1;transition:opacity .35s}.projectCard:hover:before{transform:none;opacity:.78}.projectCard i{display:block;margin-top:14px;color:#f1805b;font-size:11px;font-style:normal}.whyVisual{position:relative;background:url('/product-quick-assembly.webp') center/cover}.whyVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(25,43,35,.28),rgba(18,31,26,.68))}.whyVisual .frame{position:relative;z-index:1;background:linear-gradient(120deg,rgba(15,30,24,.12),rgba(15,30,24,.42));backdrop-filter:blur(1px)}
+.projectShowcase{background-size:cover;background-position:center}.projectShowcase:before{display:none}.projectShowcase:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,16,0) 28%,rgba(11,20,16,.58))}.projectShowcase>div{z-index:2}.projectCoverLink{position:absolute!important;inset:0;z-index:1;margin:0!important}.projectShowcase:hover{background-size:108%}.projectShowcase{transition:background-size .5s}
+.projectDetail{background:#f6f4ef;color:#17201e;min-height:100vh}.projectDetailHero{display:grid;grid-template-columns:43% 57%;min-height:650px;background:#263b32;color:#fff}.projectDetailHero>div:first-child{padding:120px 11%;display:flex;flex-direction:column;justify-content:center}.projectDetailHero>div:last-child{background-position:center;background-size:cover}.projectDetailHero p{color:#e95e31;font-size:10px;letter-spacing:.2em;font-weight:bold}.projectDetailHero h1{font-size:clamp(48px,5.5vw,82px);line-height:1.05;letter-spacing:-.07em;margin:25px 0}.projectDetailHero span{font-size:13px;color:#cad5cd}.projectOverview{padding:110px 14vw;display:grid;grid-template-columns:1.1fr 1fr;gap:10vw}.projectOverview h2{font-size:clamp(38px,4.5vw,64px);line-height:1.08}.projectOverview>p{font-size:15px;line-height:2;color:#647068;padding-top:35px}.projectFacts{display:grid;grid-template-columns:repeat(4,1fr);margin:0 10vw 110px;border-top:1px solid #d0d5cf}.projectFacts div{padding:25px;border-right:1px solid #d0d5cf}.projectFacts span,.projectFacts b{display:block}.projectFacts span{font-size:10px;color:#89928c;margin-bottom:15px}.projectFacts b{font-size:15px}.projectStory{display:grid;grid-template-columns:1fr 1fr;background:#1f3029;color:#fff}.projectStory article{padding:95px 12vw}.projectStory article+article{background:#2e453b}.projectStory small{font-size:10px;color:#e95e31;letter-spacing:.16em}.projectStory h2{font-size:40px;margin:25px 0}.projectStory p{font-size:14px;line-height:2;color:#c6d1c9}.projectResult{display:grid;grid-template-columns:58% 42%;min-height:630px}.resultImage{background-position:center;background-size:cover}.projectResult>div:last-child{padding:100px 13%;background:#e7ebe5}.projectResult h2{font-size:48px;margin:0 0 35px}.projectResult ul{list-style:none;padding:0;margin:0 0 35px}.projectResult li{border-top:1px solid #c2cbc3;padding:15px 0;font-size:13px}.projectResult li:before{content:"✓";color:#e95e31;margin-right:12px}.projectResult a{display:inline-block;background:#e95e31;color:#fff;text-decoration:none;padding:16px 20px;font-size:12px}
+@media(max-width:850px){.projectDetailHero,.projectOverview,.projectStory,.projectResult{grid-template-columns:1fr}.projectDetailHero>div:first-child{padding:80px 8vw}.projectDetailHero>div:last-child{min-height:420px}.projectOverview{padding:75px 8vw;gap:25px}.projectFacts{grid-template-columns:1fr 1fr;margin:0 8vw 75px}.projectStory article{padding:70px 8vw}.projectResult>div:last-child{padding:70px 8vw}.resultImage{min-height:430px}}
+.topbar{height:66px;font-size:28px;font-weight:700;letter-spacing:.02em}.topbar a{color:#bfc8c0;text-decoration:none;font-size:28px}.hero{overflow:hidden;height:min(720px,calc(100vh - 148px))}.heroImage{animation:heroCinematic 18s ease-in-out infinite alternate;transform-origin:70% 50%;will-change:transform,filter}.heroShade{animation:shadeReveal 1.4s ease-out both}.nav{animation:navDrop .7s ease-out both}.heroText>*{opacity:0;animation:heroRise .9s cubic-bezier(.2,.75,.25,1) forwards}.heroText>p{animation-delay:.18s}.heroText>h1{animation-delay:.32s}.heroText>.heroLine{animation-delay:.48s}.heroText>span{animation-delay:.58s}.heroText>div:last-child{animation-delay:.7s}.heroBadge{animation:badgeRise .85s .9s cubic-bezier(.2,.75,.25,1) both}.product{display:block;color:#fff;text-decoration:none;cursor:pointer}.productLink{display:block;font-size:11px;color:#fff}.productLink b{color:#e95e31;float:right}.product:focus-visible{outline:3px solid #e95e31;outline-offset:4px}.contactDetails{display:grid!important;gap:10px!important}.contactDetails a{color:#fff;text-decoration:none}.contactDetails a:hover{text-decoration:underline}
+@keyframes heroCinematic{0%{transform:scale(1.08) translate3d(-1.2%,0,0);filter:saturate(.9) brightness(.94)}50%{transform:scale(1.025) translate3d(0,0,0);filter:saturate(1) brightness(1)}100%{transform:scale(1.08) translate3d(1.2%,-.5%,0);filter:saturate(.94) brightness(.97)}}@keyframes shadeReveal{0%{opacity:0}100%{opacity:1}}@keyframes heroRise{0%{opacity:0;transform:translateY(32px)}100%{opacity:1;transform:translateY(0)}}@keyframes navDrop{0%{opacity:0;transform:translateY(-18px)}100%{opacity:1;transform:translateY(0)}}@keyframes badgeRise{0%{opacity:0;transform:translateY(45px)}100%{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.heroImage,.heroShade,.nav,.heroText>*,.heroBadge{animation:none!important;opacity:1!important;transform:none!important}}
+.productPhoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;transition:transform .55s ease}.product:hover .productPhoto{transform:scale(1.07)}.productInfo{z-index:2}.whyVisual{background:#263b32 url('/01豪华房.webp') center/contain no-repeat}.whyVisual:before{background:linear-gradient(135deg,rgba(16,34,27,.25),rgba(16,34,27,.72))}.whyVisual .frame{background:linear-gradient(120deg,rgba(15,30,24,.28),rgba(15,30,24,.54))}
+
+.p6 .productPhoto{content:url('/product-combination-1.jpg')}.p7 .productPhoto{content:url('/product-combination-2.jpg')}.p8 .productPhoto{content:url('/product-combination-3.jpg')}
+.p6 .productPhoto,.p7 .productPhoto,.p8 .productPhoto{object-fit:contain;background:#263b32}
+
+.whyVisual{padding:0}.whyVisual .frame{position:absolute;left:10%;bottom:8%;width:56%;height:155px;padding:16px;text-align:right}.whyVisual .frame b{font-size:30px}
+
+/* Keep the real project photo visible while the text panel remains legible. */
+.whyVisual:before{background:linear-gradient(135deg,rgba(16,34,27,.10),rgba(16,34,27,.34))}
+.whyVisual .frame{background:linear-gradient(120deg,rgba(15,30,24,.22),rgba(15,30,24,.42))}
+.whyVisual .frame{border:0;background:transparent;backdrop-filter:none;justify-content:flex-end;align-items:flex-end}
+.whyVisual .frame span{display:none}
+.whyVisual .frame{display:none}
+footer{padding:50px 6.5vw;font-size:13px}
+footer .brand{gap:14px;font-size:19px}
+footer .brand>b{width:50px;height:50px;font-size:17px}
+footer .brand small{font-size:9px;margin-top:5px}
+footer p{font-size:13px}
+footer>small{font-size:11px}
+.contactDetails a[href^="tel:"]::after{content:"（微信同号）"}
+.facts .deliveryMetric b{font-size:clamp(22px,2.3vw,32px);white-space:nowrap}
+.wechatContact{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.35)}
+.wechatContact>div{display:grid;gap:8px}
+.wechatContact small{font-size:9px;letter-spacing:.16em;color:#ffe0d5}
+.wechatContact b{font-size:14px}
+.wechatContact span{font-size:11px;color:#fff0eb}
+.wechatContact img{width:136px;height:136px;display:block;flex:none;background:#fff;padding:5px}
+
+@media(max-width:850px){
+  .topbar{display:flex;height:auto;min-height:46px;padding:7px 4vw;gap:12px;font-size:11px;font-weight:600;line-height:1.35;letter-spacing:0}
+  .topbar span{max-width:54%}
+  .topbar a{color:#fff;font-size:12px;line-height:1.35;text-align:right;white-space:nowrap}
+  .wechatContact{align-items:flex-start}
+  .wechatContact img{width:112px;height:112px}
+}
+
+.projectCard:nth-child(3){background-size:contain;background-repeat:no-repeat;background-color:#17201e}
+
+/* Avoid a locale-dependent filename for this image in production. */
+.whyVisual{background:#263b32 url('/product-premium-house.webp') center/cover no-repeat}
+.quickContact{position:fixed;right:22px;bottom:22px;z-index:20;display:grid;gap:8px}.quickContact a{display:flex;align-items:center;justify-content:center;min-width:148px;min-height:46px;padding:0 16px;border-radius:3px;background:#e95e31;color:#fff;text-decoration:none;font-size:13px;font-weight:700;box-shadow:0 12px 30px rgba(15,30,24,.24)}.quickContact a:last-child{background:#21362d}.quickContact a:hover{transform:translateY(-2px)}@media(max-width:850px){.quickContact{right:12px;bottom:12px;grid-template-columns:1fr 1fr;gap:6px}.quickContact a{min-width:0;min-height:42px;padding:0 12px;font-size:12px}}
+.projectShowcase{display:block;text-decoration:none;cursor:pointer}.projectCardLink{display:block;margin-top:18px;color:#fff;font-size:11px}
+.projectShowcase{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}.projectShowcase:hover{background-size:cover!important}
+
+/* News page refinements carried over from yesterday's version. */
+.newsHero>p{font-size:13px!important;letter-spacing:.18em!important;line-height:1.4}.newsHero h1{font-size:clamp(42px,4.8vw,68px)!important;line-height:1.12!important;margin:22px 0!important}.newsHero span{font-size:15px!important}
+.articleList article{position:relative}.articleList article>a{position:absolute;inset:0;z-index:2;margin:0;font-size:0}.articleList article>a:before{display:none}
+@media(max-width:850px){.newsHero>p{font-size:11px!important}.newsHero h1{font-size:clamp(38px,10vw,52px)!important}.newsHero span{font-size:14px!important}}
+
+/* Yesterday's homepage visual and design-capability sections. */
+.enProjects .projectCard:nth-child(1){background-image:url('/project-mountain-valley-camp.jpg')}.enProjects .projectCard:nth-child(2){background-image:url('/project-colourful-pavilion.jpg')}.enProjects .projectCard:nth-child(3){background-image:url('/project-cube-office.png')}.enProjects .projectCard:before{inset:0;transform:none;background:linear-gradient(180deg,rgba(11,20,16,.02) 25%,rgba(11,20,16,.82));opacity:1}.enProjects .projectCard:nth-child(3){background-size:cover;background-repeat:no-repeat;background-color:#17201e}
+.designCapability{padding:115px 6.5vw;background:#f8f6f1;display:grid;grid-template-columns:34% 1fr;gap:7vw}.designCapabilityLead h2{font-size:clamp(38px,4.3vw,63px);line-height:1.1;letter-spacing:-.06em;margin:0}.designCapabilityLead>p:last-child{color:#68736c;font-size:14px;line-height:2;margin:28px 0}.designCapabilityGrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d8d8d2}.designCapabilityGrid article{min-height:290px;padding:25px 22px;border-right:1px solid #d8d8d2;position:relative;background:linear-gradient(135deg,transparent 49.5%,#e9e7df 50%,transparent 50.5%)}.designCapabilityGrid article:first-child{padding-left:0}.designCapabilityGrid b{display:block;color:#e95e31;font-size:12px}.designCapabilityGrid small{display:block;margin-top:62px;font-size:10px;letter-spacing:.16em;color:#6f7872}.designCapabilityGrid h3{font-size:23px;line-height:1.18;margin:12px 0}.designCapabilityGrid p{font-size:13px;line-height:1.8;color:#68736c;margin:0}
+@media(max-width:850px){.designCapability{grid-template-columns:1fr;padding:80px 7vw;gap:38px}.designCapabilityGrid{grid-template-columns:1fr}.designCapabilityGrid article,.designCapabilityGrid article:first-child{min-height:210px;padding:24px 0;border-right:0;border-bottom:1px solid #d8d8d2}.designCapabilityGrid small{margin-top:35px}}
+.enListing .articleList article>a:before{display:none}
+
+/* Mobile image variants: keep the desktop source for larger screens and serve 900px WebP on phones. */
+.projectShowcase,.detailImage,.casePhoto,.projectDetailHero>div:last-child,.resultImage{background-image:var(--desktop-image)}
+@media(max-width:850px){
+  .heroImage{background-image:url('/zhuoya-hero-mobile.webp')}
+  .whyVisual{background-image:url('/product-premium-house-mobile.webp')}
+  .projectCard:nth-child(1){background-image:url('/product-site-office-mobile.webp')}
+  .projectCard:nth-child(2){background-image:url('/product-flat-pack-mobile.webp')}
+  .projectCard:nth-child(3){background-image:url('/project-cultural-tourism-mobile.webp')}
+  .enProjects .projectCard:nth-child(1){background-image:url('/project-mountain-valley-camp-mobile.webp')}
+  .enProjects .projectCard:nth-child(2){background-image:url('/project-colourful-pavilion-mobile.webp')}
+  .enProjects .projectCard:nth-child(3){background-image:url('/project-cube-office-mobile.webp')}
+  .p6 .productPhoto{content:url('/product-combination-1-mobile.webp')}
+  .p7 .productPhoto{content:url('/product-combination-2-mobile.webp')}
+  .p8 .productPhoto{content:url('/product-combination-3-mobile.webp')}
+  .projectShowcase,.detailImage,.casePhoto,.projectDetailHero>div:last-child,.resultImage{background-image:var(--mobile-image)}
+  .realGallery img[src*="/real-gallery/车间01.png"]{content:url('/real-gallery/车间01-mobile.webp')}
+  .realGallery img[src*="/real-gallery/车间02.png"]{content:url('/real-gallery/车间02-mobile.webp')}
+  .realGallery img[src*="/real-gallery/车间03.png"]{content:url('/real-gallery/车间03-mobile.webp')}
+  .realGallery img[src*="/real-gallery/车间05.png"]{content:url('/real-gallery/车间05-mobile.webp')}
+  .realGallery img[src*="/real-gallery/工地案例01.png"]{content:url('/real-gallery/工地案例01-mobile.webp')}
+}
