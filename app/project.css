@@ -63,7 +63,7 @@ footer>small{font-size:11px}
 /* Mobile image variants: keep the desktop source for larger screens and serve 900px WebP on phones. */
 .projectShowcase,.detailImage,.casePhoto,.projectDetailHero>div:last-child,.resultImage{background-image:var(--desktop-image)}
 @media(max-width:850px){
-  .heroImage{background-image:url('/zhuoya-hero-mobile.webp')}
+  .heroImage{background-image:url('/shanjiang-hero-mobile.webp')}
   .whyVisual{background-image:url('/product-premium-house-mobile.webp')}
   .projectCard:nth-child(1){background-image:url('/product-site-office-mobile.webp')}
   .projectCard:nth-child(2){background-image:url('/product-flat-pack-mobile.webp')}

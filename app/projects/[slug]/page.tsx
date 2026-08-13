@@ -10,7 +10,7 @@ export default async function ProjectDetail({params}:{params:Promise<{slug:strin
   const project=getProject(slug);
   if(!project)notFound();
   return <main className="projectDetail">
-    <header className="detailTop"><a className="brand" href="/"><b>ZY</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></a><div><a href="/projects">全部案例</a><a className="detailCta" href="/#contact">咨询同类项目 →</a></div></header>
+    <header className="detailTop"><a className="brand" href="/"><b>SJ</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></a><div><a href="/projects">全部案例</a><a className="detailCta" href="/#contact">咨询同类项目 →</a></div></header>
     <section className="projectDetailHero"><div><p>PROJECT CASE · {project.type}</p><h1>{project.name}</h1><span>{project.tag}</span></div><div style={{"--desktop-image":`url(${project.image})`,"--mobile-image":`url(${mobileImageSrc(project.image)})`} as CSSProperties}/></section>
     <section className="projectOverview"><div><p className="kicker">PROJECT OVERVIEW</p><h2>从真实需求出发，<br/><em>组织一套可落地的空间。</em></h2></div><p>{project.overview}</p></section>
     <section className="projectFacts">{project.facts.map(([label,value])=><div key={label}><span>{label}</span><b>{value}</b></div>)}</section>

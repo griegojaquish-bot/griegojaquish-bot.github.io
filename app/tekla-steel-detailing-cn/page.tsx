@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Tekla钢结构深化服务｜钢结构建模与加工图服务",
   description: "山江提供Tekla Structures三维建模、钢结构深化、加工图和施工图支持。20年钢结构经验，7年Tekla使用经验，服务钢结构公司、建筑承包商和模块化建筑企业。",
   keywords: ["Tekla钢结构深化", "Tekla建模服务", "钢结构加工图", "钢结构施工图", "钢结构深化外包", "Tekla Structures建模"],
-  alternates: { canonical: "https://YOUR-DOMAIN.example/tekla-steel-detailing-cn" },
+  alternates: { canonical: "https://griegojaquish-bot.github.io/tekla-steel-detailing-cn" },
 };
 
 const services = [
@@ -22,7 +22,7 @@ const projectExperience = [["钢结构厂房项目", "Tekla建模、施工图和
 
 export default function TeklaSteelDetailingChinesePage() {
   return <main className="teklaPage teklaCn">
-    <header className="teklaHeader"><Link className="teklaBrand" href="/" aria-label="山江首页"><b>ZY</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link><nav aria-label="Tekla服务导航"><Link href="/">首页</Link><Link href="/projects">工厂与项目</Link><Link href="#services">服务内容</Link><Link href="/tekla-steel-detailing">English <i>↗</i></Link><Link className="teklaNavCta" href="#contact">获取报价 <i>→</i></Link></nav></header>
+    <header className="teklaHeader"><Link className="teklaBrand" href="/" aria-label="山江首页"><b>SJ</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link><nav aria-label="Tekla服务导航"><Link href="/">首页</Link><Link href="/projects">工厂与项目</Link><Link href="#services">服务内容</Link><Link href="/tekla-steel-detailing">English <i>↗</i></Link><Link className="teklaNavCta" href="#contact">获取报价 <i>→</i></Link></nav></header>
 
     <section className="teklaHero"><div className="teklaHeroCopy"><p className="teklaKicker">TEKLA钢结构深化服务</p><h1>让钢结构深化，<em>真正服务于生产。</em></h1><p className="teklaLead">山江为钢结构公司、建筑承包商和模块化建筑企业提供Tekla建模、钢结构深化、加工图和施工图支持，帮助海外项目团队提高出图效率，减少深化成本。</p><div className="teklaExperience"><div><strong>20</strong><span>年钢结构行业经验</span></div><div><strong>7</strong><span>年Tekla Structures使用经验</span></div></div><div className="teklaActions"><Link className="teklaButton primary" href="#contact">获取项目报价 <b>→</b></Link><Link className="teklaButton secondary" href="#services">查看服务内容</Link></div></div><div className="teklaModelBoard" aria-label="Tekla钢结构三维模型示例"><div className="modelTopline"><span>TEKLA / MODEL REVIEW</span><span>STEEL READY</span></div><div className="modelFrame"><div className="modelRoof" /><div className="modelColumns"><i /><i /><i /><i /><i /></div><div className="modelFloor" /><span className="modelLabel labelA">3D MODEL</span><span className="modelLabel labelB">DETAIL</span><span className="modelLabel labelC">FABRICATION</span></div><p>真实Tekla模型示例：弧形楼梯与平台深化。</p></div></section>
 
@@ -42,6 +42,6 @@ export default function TeklaSteelDetailingChinesePage() {
 
     <section id="contact" className="teklaContact"><div className="contactCopy"><p className="teklaKicker">开始合作</p><h2>把图纸发过来，<em>我们先聊聊项目。</em></h2><p>如果你正在寻找可靠的Tekla钢结构深化伙伴，请发送结构图纸、项目要求、执行标准和交付计划。我们会先了解工作范围，再给出初步建议。</p><div className="contactInfo"><a href="mailto:13120056@qq.com?subject=Tekla%20steel%20detailing%20enquiry">发送项目资料</a><a href="tel:13539957289">+86 135 3995 7289</a></div></div><div className="contactCard"><p>为了更快评估项目，请准备：</p><ul><li>结构图纸和项目类型</li><li>执行标准与交付内容</li><li>预计工程量或钢材吨位</li><li>目标交付时间</li></ul><a className="teklaButton dark" href="mailto:13120056@qq.com?subject=Tekla%20steel%20detailing%20enquiry">邮件联系山江 <b>→</b></a></div></section>
 
-    <footer className="teklaFooter"><Link className="teklaBrand" href="/"><b>ZY</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link><p>Tekla建模 · 钢结构深化 · 加工图 · 施工图</p><span>© 2026 SHANJIANG STEEL STRUCTURE</span></footer>
+    <footer className="teklaFooter"><Link className="teklaBrand" href="/"><b>SJ</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link><p>Tekla建模 · 钢结构深化 · 加工图 · 施工图</p><span>© 2026 SHANJIANG STEEL STRUCTURE</span></footer>
   </main>;
 }

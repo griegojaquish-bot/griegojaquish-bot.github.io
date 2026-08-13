@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function EnglishNews() {
   return <main className="listing enListing">
-    <header className="detailTop"><Link className="brand" href="/en"><b>ZY</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><div><Link href="/en">Home</Link><a className="detailCta" href="/en/#contact">Get a quote →</a></div></header>
+    <header className="detailTop"><Link className="brand" href="/en"><b>SJ</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><div><Link href="/en">Home</Link><a className="detailCta" href="/en/#contact">Get a quote →</a></div></header>
     <section className="listingHero newsHero"><p>NEWS &amp; INSIGHTS</p><h1>Practical ideas for<br/><em>better site delivery.</em></h1><span>Useful guidance on modular buildings, manufacturing and project delivery from the Shanjiang team.</span></section>
     <section className="articleList">{articles.map(article=><article key={article.slug}><small>{article.date}　{article.category}</small><h2>{article.title}</h2><p>{article.summary}</p><Link aria-label={`Read article: ${article.title}`} href={`/en/news/${article.slug}`} /></article>)}</section>
   </main>;

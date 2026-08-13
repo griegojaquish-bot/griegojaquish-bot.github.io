@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Tekla Steel Detailing Service | Structural Steel Shop Drawings Provider",
   description: "Professional Tekla Structures modeling, steel detailing, fabrication drawings and shop drawing support from Shanjiang for global steel fabricators, contractors and modular building companies.",
   keywords: ["Tekla steel detailing service", "Tekla detailer outsourcing", "structural steel detailing", "steel shop drawings", "steel fabrication drawings", "Tekla Structures modeling"],
-  alternates: { canonical: "https://YOUR-DOMAIN.example/tekla-steel-detailing" },
+  alternates: { canonical: "https://griegojaquish-bot.github.io/tekla-steel-detailing" },
 };
 
 const services = [
@@ -21,7 +21,7 @@ const projectExperience = [["STEEL STRUCTURE WORKSHOP", "Tekla modeling, shop dr
 
 export default function TeklaSteelDetailingPage() {
   return <main className="teklaPage">
-    <header className="teklaHeader"><Link className="teklaBrand" href="/en" aria-label="Shanjiang home"><b>ZY</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><nav aria-label="Tekla service navigation"><Link href="/en">Home</Link><Link href="/en/factory">Factory &amp; Projects</Link><Link href="#services">Services</Link><Link className="teklaNavCta" href="#contact">Request a quote <i>→</i></Link></nav></header>
+    <header className="teklaHeader"><Link className="teklaBrand" href="/en" aria-label="Shanjiang home"><b>SJ</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><nav aria-label="Tekla service navigation"><Link href="/en">Home</Link><Link href="/en/factory">Factory &amp; Projects</Link><Link href="#services">Services</Link><Link className="teklaNavCta" href="#contact">Request a quote <i>→</i></Link></nav></header>
 
     <section className="teklaHero"><div className="teklaHeroCopy"><p className="teklaKicker">TEKLA STEEL DETAILING SERVICE</p><h1>Professional steel detailing support, <em>built for production.</em></h1><p className="teklaLead">Shanjiang supports global steel fabricators, contractors and modular building companies with accurate Tekla modeling, fabrication drawings and shop drawing solutions.</p><div className="teklaExperience"><div><strong>20</strong><span>years in steel structure work</span></div><div><strong>7</strong><span>years using Tekla Structures</span></div></div><div className="teklaActions"><Link className="teklaButton primary" href="#contact">Request a quote <b>→</b></Link><Link className="teklaButton secondary" href="#services">Explore services</Link></div></div><div className="teklaModelBoard" aria-label="Tekla steel detailing workflow illustration"><div className="modelTopline"><span>TEKLA / MODEL REVIEW</span><span>STEEL READY</span></div><div className="modelFrame"><div className="modelRoof" /><div className="modelColumns"><i /><i /><i /><i /><i /></div><div className="modelFloor" /><span className="modelLabel labelA">3D MODEL</span><span className="modelLabel labelB">DETAIL</span><span className="modelLabel labelC">FABRICATION</span></div><p>From engineering information to workshop-ready drawing packages.</p></div></section>
 
@@ -41,6 +41,6 @@ export default function TeklaSteelDetailingPage() {
 
     <section id="contact" className="teklaContact"><div className="contactCopy"><p className="teklaKicker">WORK WITH US</p><h2>Send the drawings. <em>Start the conversation.</em></h2><p>Looking for a reliable Tekla detailing partner? Send us your structural drawings, project requirements, required standards and delivery schedule. We will review the scope and provide initial feedback.</p><div className="contactInfo"><a href="mailto:13120056@qq.com?subject=Tekla%20steel%20detailing%20enquiry">13120056@qq.com</a><a href="tel:13539957289">+86 135 3995 7289</a></div></div><div className="contactCard"><p>To request a quotation, please include:</p><ul><li>Structural drawings and project type</li><li>Required standards and deliverables</li><li>Estimated quantity or steel tonnage</li><li>Target delivery schedule</li></ul><a className="teklaButton dark" href="mailto:13120056@qq.com?subject=Tekla%20steel%20detailing%20enquiry">Email Shanjiang <b>→</b></a></div></section>
 
-    <footer className="teklaFooter"><Link className="teklaBrand" href="/en"><b>ZY</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><p>Tekla modeling · Steel detailing · Fabrication drawings · Shop drawings</p><span>© 2026 SHANJIANG STEEL STRUCTURE</span></footer>
+    <footer className="teklaFooter"><Link className="teklaBrand" href="/en"><b>SJ</b><span>SHANJIANG<small>MODULAR HOUSING</small></span></Link><p>Tekla modeling · Steel detailing · Fabrication drawings · Shop drawings</p><span>© 2026 SHANJIANG STEEL STRUCTURE</span></footer>
   </main>;
 }

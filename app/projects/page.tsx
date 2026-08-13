@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <main className="listing">
       <header className="detailTop">
-        <Link className="brand" href="/"><b>ZY</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link>
+        <Link className="brand" href="/"><b>SJ</b><span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small></span></Link>
         <div><Link href="/">首页</Link><Link className="detailCta" href="/#contact">项目咨询 →</Link></div>
       </header>
       <section className="listingHero">

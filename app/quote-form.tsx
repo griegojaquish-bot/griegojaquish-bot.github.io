@@ -2,8 +2,8 @@ export default function QuoteForm() {
   return (
     <form className="quoteForm" action="https://formsubmit.co/13120056@qq.com" method="POST">
       <input type="hidden" name="_subject" value="山江网站：新方案报价咨询" />
-      <input type="hidden" name="_next" value="https://YOUR-DOMAIN.example/thanks" />
-      <input type="hidden" name="_url" value="https://YOUR-DOMAIN.example/" />
+      <input type="hidden" name="_next" value="https://griegojaquish-bot.github.io/thanks" />
+      <input type="hidden" name="_url" value="https://griegojaquish-bot.github.io/" />
       <input type="hidden" name="_template" value="table" />
       <p className="quoteHint">提交后将直接发送给山江团队；紧急项目请直接电话或微信联系。</p>
       <label>

@@ -30,7 +30,7 @@ export default function Home(){return <main>
 </header>
 <nav className="nav" aria-label="主导航">
 <a className="brand" href="/#top">
-<b>ZY</b>
+<b>SJ</b>
 <span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small>
 </span>
 </a>
@@ -254,7 +254,7 @@ export default function Home(){return <main>
 </aside>
 <footer>
 <a className="brand" href="#top">
-<b>ZY</b>
+<b>SJ</b>
 <span>广州山江钢结构<small>SHANJIANG STEEL STRUCTURE</small>
 </span>
 </a>

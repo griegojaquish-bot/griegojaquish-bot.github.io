@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://YOUR-DOMAIN.example"),
+  metadataBase: new URL("https://griegojaquish-bot.github.io"),
   title: {
     default: "广州山江钢结构｜模块化建筑与集成房屋厂家",
     template: "%s｜广州山江钢结构",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "zh_CN",
-    url: "https://YOUR-DOMAIN.example",
+    url: "https://griegojaquish-bot.github.io",
     siteName: "广州山江钢结构",
     title: "广州山江钢结构｜模块化建筑与集成房屋厂家",
     description: "打包箱、快拼箱、工地板房与模块化空间的一站式交付服务。",
@@ -54,7 +54,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "广州山江钢结构",
-              url: "https://YOUR-DOMAIN.example",
+              url: "https://griegojaquish-bot.github.io",
               telephone: "+86-13539957289",
               email: "13120056@qq.com",
               address: {
