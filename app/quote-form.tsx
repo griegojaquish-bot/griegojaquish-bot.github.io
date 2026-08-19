@@ -2,10 +2,10 @@ export default function QuoteForm() {
   return (
     <form className="quoteForm" action="https://formsubmit.co/13120056@qq.com" method="POST">
       <input type="hidden" name="_subject" value="山江设计服务：设计与详图需求" />
-      <input type="hidden" name="_next" value="https://griegojaquish-bot.github.io/thanks" />
-      <input type="hidden" name="_url" value="https://griegojaquish-bot.github.io/" />
+      <input type="hidden" name="_next" value="https://shanjiang.asia/thanks" />
+      <input type="hidden" name="_url" value="https://shanjiang.asia/" />
       <input type="hidden" name="_template" value="table" />
-      <p className="quoteHint">提交后由人工确认工作范围并报价；紧急项目请直接电话或微信联系。</p>
+      <p className="quoteHint">提交后由人工确认工作范围并报价，通常在一个工作日内回复；紧急项目请直接电话或微信联系。提交的信息仅用于本次项目沟通。</p>
       <label>
         您的称呼
         <input name="name" required maxLength={80} placeholder="请输入姓名或公司称呼" />
@@ -25,6 +25,7 @@ export default function QuoteForm() {
           <option>方案设计 / CAD 图纸表达</option>
           <option>Tekla 三维建模</option>
           <option>钢结构详图 / 加工图</option>
+          <option>AI FDE 客户协同</option>
           <option>其他设计与深化支持</option>
         </select>
       </label>

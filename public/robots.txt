@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://griegojaquish-bot.github.io/sitemap.xml
+Sitemap: https://shanjiang.asia/sitemap.xml

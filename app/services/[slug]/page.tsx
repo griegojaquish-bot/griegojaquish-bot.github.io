@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { designCases, services } from "../../design-data";
 
 export function generateStaticParams() {
   return services.map(({ slug }) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
+  return service ? { title: service.title, description: service.summary, alternates: { canonical: `/services/${slug}` }, openGraph: { title: `${service.title}｜山江设计服务`, description: service.summary, images: [service.image] } } : {};
 }
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {

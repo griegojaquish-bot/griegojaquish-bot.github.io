@@ -1,13 +1,18 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { designCases } from "../../design-data";
 
-export function generateStaticParams() {
-  return designCases.map(({ slug }) => ({ slug }));
-}
+const caseNotes: Record<string, { background: string; challenge: string; scope: string[]; workflow: string[]; output: string[]; boundary: string }> = {
+  "landscape-structure": { background: "异形景观结构需要同时回应空间体验、曲线形体和结构构造的表达需求。", challenge: "难点在于把流动的空间意图转换成各方可共同讨论的构件与节点关系。", scope: ["方案形体与空间关系梳理", "结构与构造表达配合", "关键节点沟通图整理"], workflow: ["明确空间与结构的关键控制点", "以模型和图纸核对曲线构件关系", "整理用于项目沟通的表达资料"], output: ["方案沟通图", "构造与节点示意", "项目讨论用模型或图纸资料"], boundary: "本案例展示设计表达与深化沟通方式，不构成结构计算或施工图审查文件。" },
+  "curved-stair": { background: "曲线楼梯涉及踏步、平台、支撑和连接关系，需要在有限空间中把构件逻辑讲清楚。", challenge: "曲线构件与节点交接位置多，二维图纸容易遗漏构件关系或安装理解偏差。", scope: ["Tekla 三维模型组织", "曲线踏步与平台关系核对", "节点与构件位置协调"], workflow: ["接收并核对已有图纸与尺寸条件", "建立曲线构件及连接关系模型", "围绕关键节点进行复核与图纸整理"], output: ["三维深化模型", "关键节点表达", "构件关系核对资料"], boundary: "模型和图纸以已确认资料为基础；连接设计、荷载与现场施工条件需由项目相关方复核。" },
+  "landscape-bridge-drawing": { background: "景观桥项目需要将复杂的空间形体逐步转化为构件、节点和安装沟通信息。", challenge: "设计效果与加工安装之间需要有清晰的信息层级，避免不同团队理解不一致。", scope: ["构件与装配关系整理", "节点信息与图纸表达", "加工及安装沟通支持"], workflow: ["确认图纸版本、交付范围和安装关注点", "组织构件、节点与装配图信息", "输出项目沟通和复核所需的图纸资料"], output: ["构件图与装配图", "节点信息整理", "版本与安装沟通资料"], boundary: "加工前仍应由项目团队按最终确认版本复核材料、连接、尺寸和现场条件。" },
+};
+
+export function generateStaticParams() { return designCases.map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = designCases.find((entry) => entry.slug === slug); return item ? { title: `${item.title}｜案例`, description: item.summary, alternates: { canonical: `/cases/${slug}` }, openGraph: { title: `${item.title}｜山江设计服务`, description: item.summary, images: [item.image] } } : {}; }
 
 export default async function CaseDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const item = designCases.find((entry) => entry.slug === slug);
-  if (!item) notFound();
-  return <main className="designDetail"><header><a href="/#cases">← 返回案例</a><a className="detailCta" href="/#contact">提交需求 →</a></header><section className="caseHero"><img src={item.image} alt={item.title} /><div><p>CASE DETAIL · {item.tag}</p><h1>{item.title}</h1><span>{item.summary}</span></div></section><section className="detailBody"><div><p className="detailKicker">REFERENCE FOCUS</p><h2>从图片中，<em>看空间与构件关系。</em></h2></div><ul>{item.focus.map((focus, index) => <li key={focus}><b>0{index + 1}</b><span>{focus}</span></li>)}</ul></section><section className="detailContact"><p>开始合作</p><h2>有类似项目？<br />先把资料发过来。</h2><a href="/#contact">提交项目需求 →</a></section></main>;
+  const { slug } = await params; const item = designCases.find((entry) => entry.slug === slug); if (!item) notFound();
+  const note = caseNotes[slug] || { background: "该页面用于展示项目空间、构件或图纸表达方向。", challenge: "具体深化深度、责任范围和交付内容需以实际资料和项目确认范围为准。", scope: item.focus, workflow: ["确认资料与工作范围", "围绕关键内容组织表达", "按确认范围整理交付资料"], output: ["项目沟通资料", "图纸或模型表达支持", "范围确认后的交付清单"], boundary: "图片为项目空间或工作方向参考，不代表对未展示内容的工程承诺。" };
+  return <main className="designDetail"><header><a href="/#cases">← 返回案例</a><a className="detailCta" href="/#contact">提交需求 →</a></header><section className="caseHero"><img src={item.image} alt={item.title} /><div><p>CASE DETAIL · {item.tag}</p><h1>{item.title}</h1><span>{item.summary}</span></div></section><section className="caseStory"><div><p className="detailKicker">PROJECT CONTEXT</p><h2>不是只看图片，<em>还要看怎样落到资料里。</em></h2></div><div><article><small>项目背景</small><p>{note.background}</p></article><article><small>项目难点</small><p>{note.challenge}</p></article></div></section><section className="caseScope"><div><p className="detailKicker">WORK SCOPE</p><h2>本案例中，<em>重点梳理这些内容。</em></h2></div><ul>{note.scope.map((entry, index) => <li key={entry}><b>0{index + 1}</b><span>{entry}</span></li>)}</ul></section><section className="caseWorkflow"><p className="detailKicker">DETAILING APPROACH</p><h2>从资料到交付，<em>先把关系核对清楚。</em></h2><div>{note.workflow.map((entry, index) => <article key={entry}><b>0{index + 1}</b><p>{entry}</p></article>)}</div></section><section className="detailBody"><div><p className="detailKicker">POSSIBLE DELIVERABLES</p><h2>交付不只是一张图，<em>而是可沟通的资料包。</em></h2></div><ul>{note.output.map((entry, index) => <li key={entry}><b>0{index + 1}</b><span>{entry}</span></li>)}</ul></section><section className="caseBoundary"><p className="detailKicker">REVIEW NOTE</p><p>{note.boundary}</p></section><section className="detailContact"><p>开始合作</p><h2>有类似项目？<br />先把资料发过来。</h2><a href="/#contact">提交项目需求 →</a></section></main>;
 }
