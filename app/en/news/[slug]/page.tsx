@@ -8,7 +8,7 @@ export function generateStaticParams(){return articles.map(({slug})=>({slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
   const {slug}=await params;
   const article=getArticle(slug);
-  return {title:article?`${article.title} | Shanjiang Modular Housing`:"News Article | Shanjiang Modular Housing",description:article?.summary,alternates:{canonical:`/en/news/${slug}`},openGraph:article?{title:article.title,description:article.summary,url:`/en/news/${slug}`,type:"article"}:undefined};
+  return article?{title:`${article.title} | Shanjiang Modular Housing`,description:article.summary,alternates:{canonical:`/en/news/${slug}`},openGraph:{title:article.title,description:article.summary,url:`/en/news/${slug}`,type:"article",images:[]},twitter:{card:"summary",title:article.title,description:article.summary,images:[]}}:{};
 }
 
 const relatedRoutes:Record<string,string[]>={

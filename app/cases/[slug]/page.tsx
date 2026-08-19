@@ -9,7 +9,7 @@ const caseNotes: Record<string, { background: string; challenge: string; scope: 
 };
 
 export function generateStaticParams() { return designCases.map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = designCases.find((entry) => entry.slug === slug); return item ? { title: `${item.title}｜案例`, description: item.summary, alternates: { canonical: `/cases/${slug}` }, openGraph: { title: `${item.title}｜山江设计服务`, description: item.summary, images: [item.image] } } : {}; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = designCases.find((entry) => entry.slug === slug); return item ? { title: `${item.title}｜案例`, description: item.summary, alternates: { canonical: `/cases/${slug}` }, openGraph: { title: `${item.title}｜山江设计服务`, description: item.summary, images: [item.image] }, twitter: { card: "summary_large_image", title: `${item.title}｜山江设计服务`, description: item.summary, images: [item.image] } } : {}; }
 
 export default async function CaseDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const item = designCases.find((entry) => entry.slug === slug); if (!item) notFound();

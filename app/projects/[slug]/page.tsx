@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "../data";
 import { mobileImageSrc } from "../../image-paths";
 
 export function generateStaticParams(){return projects.map(project=>({slug:project.slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const project=getProject(slug);return project?{title:`${project.name}｜项目案例`,description:project.overview,alternates:{canonical:`/projects/${slug}`},openGraph:{title:`${project.name}｜山江项目案例`,description:project.overview,images:[project.image]},twitter:{card:"summary_large_image",title:`${project.name}｜山江项目案例`,description:project.overview,images:[project.image]}}:{};}
 
 export default async function ProjectDetail({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;

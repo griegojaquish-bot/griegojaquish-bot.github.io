@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Tekla Steel Detailing Service | Structural Steel Shop Drawings Provider",
   description: "Professional Tekla Structures modeling, steel detailing, fabrication drawings and shop drawing support from Shanjiang for global steel fabricators, contractors and modular building companies.",
   keywords: ["Tekla steel detailing service", "Tekla detailer outsourcing", "structural steel detailing", "steel shop drawings", "steel fabrication drawings", "Tekla Structures modeling"],
-  alternates: { canonical: "https://griegojaquish-bot.github.io/tekla-steel-detailing" },
+  alternates: { canonical: "https://shanjiang.asia/tekla-steel-detailing" },
 };
 
 const services = [

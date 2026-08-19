@@ -11,6 +11,12 @@ const aiScenes = [
   ["工程图文", "图纸说明、变更记录和交付资料只是其中一种可应用场景。", "资料 → 整理 → 核对 → 输出"],
 ];
 
+const agentSolutions = [
+  ["知识问答智能体", "连接企业文档、产品资料和制度手册，回答有依据、可追溯。", "知识库 + 权限 + 引用"],
+  ["客服与销售智能体", "接收咨询、识别意图、整理客户信息，复杂问题转交人工。", "消息 + 客户资料 + 人工接管"],
+  ["业务流程智能体", "按规则读取表单、整理资料、生成草稿、更新状态并留下记录。", "触发器 + 工具 + 审核节点"],
+];
+
 export function generateStaticParams() {
   return services.map(({ slug }) => ({ slug }));
 }
@@ -18,7 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
-  return service ? { title: service.title, description: service.summary, alternates: { canonical: `/services/${slug}` }, openGraph: { title: `${service.title}｜山江设计与智能应用`, description: service.summary, images: [service.image] } } : {};
+  return service ? { title: service.title, description: service.summary, alternates: { canonical: `/services/${slug}` }, openGraph: { title: `${service.title}｜山江设计与智能应用`, description: service.summary, images: [service.image] }, twitter: { card: "summary_large_image", title: `${service.title}｜山江设计与智能应用`, description: service.summary, images: [service.image] } } : {};
 }
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -26,11 +32,18 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
   const isAiFde = service.slug === "ai-fde";
+  const isAiAgent = service.slug === "ai-agent-workflow";
+  const isAiApplication = isAiFde || isAiAgent;
   const relatedCases = service.caseSlugs.map((caseSlug) => designCases.find((item) => item.slug === caseSlug)).filter(Boolean);
+  const heroNodes = isAiAgent ? ["消息 / 表单", "企业知识", "业务工具", "人工接管", "运行记录", "持续优化"] : ["客服", "销售", "资料", "网站 / 小程序", "运营", "工程图文"];
 
   return <main className="designDetail">
-    <header><a href={isAiFde ? "/ai-applications" : "/design-detailing"}>← 返回{isAiFde ? "AI 应用" : "设计深化"}</a><a className="detailCta" href={`${isAiFde ? "/ai-applications" : "/design-detailing"}#contact`}>提交需求 →</a></header>
-    <section className={`serviceHero ${isAiFde ? "aiServiceHero" : ""}`}><div><p>SERVICE / {service.number}</p><h1>{service.title}</h1><span>{service.summary}</span><a href="#start" className="serviceHeroCta">查看怎么开始 ↓</a></div>{isAiFde ? <div className="aiServiceMap" aria-label="AI 连接客服、销售、资料、网站小程序、运营交付与工程图文"><b>AI<br />AGENT</b>{["客服", "销售", "资料", "网站 / 小程序", "运营", "工程图文"].map((item) => <span key={item}>{item}</span>)}</div> : <img src={service.image} alt={`${service.title}服务示意`} />}</section>
+    <header><a href={isAiApplication ? "/ai-applications" : "/design-detailing"}>← 返回{isAiApplication ? "AI 应用" : "设计深化"}</a><a className="detailCta" href={`${isAiApplication ? "/ai-applications" : "/design-detailing"}#contact`}>提交需求 →</a></header>
+    <section className={`serviceHero ${isAiApplication ? "aiServiceHero" : ""}`}><div><p>SERVICE / {service.number}</p><h1>{service.title}</h1><span>{service.summary}</span><a href="#start" className="serviceHeroCta">查看怎么开始 ↓</a></div>{isAiApplication ? <div className={`aiServiceMap ${isAiAgent ? "agentMap" : ""}`} aria-label={isAiAgent ? "企业 AI 智能体连接消息、知识、工具、人工与运行记录" : "AI FDE 连接跨行业业务场景"}><b>{isAiAgent ? <>AI<br />AGENT</> : <>AI<br />FDE</>}</b>{heroNodes.map((item) => <span key={item}>{item}</span>)}</div> : <img src={service.image} alt={`${service.title}服务示意`} />}</section>
+    {isAiAgent && <section className="agentDetail">
+      <div><p className="detailKicker">AI AGENT ARCHITECTURE</p><h2>重点是搭系统，<br /><em>不是派人驻场。</em></h2><p>企业 AI 智能体负责接收任务、查找企业知识、调用获准工具并输出结果；遇到低置信度、敏感内容或异常情况时自动转交人工。它强调的是可重复运行的系统能力。</p></div>
+      <div className="agentFlow" aria-label="企业 AI 智能体工作流程"><span>消息 / 表单<small>任务入口</small></span><i>→</i><b>AI 智能体<small>理解与执行</small></b><i>→</i><span>知识 / 工具<small>受控调用</small></span><i>→</i><span>人工确认<small>关键把关</small></span></div>
+    </section>}
     {isAiFde && <section className="aiFdeDetail">
       <p className="detailKicker">AI FDE EXPLAINED</p><h2>AI FDE 是什么？<br /><em>不是单独卖 AI 工具。</em></h2>
       <p><b>AI FDE</b> 是 <b>AI Forward Deployed Engineer</b> 的简称，可理解为“AI 现场部署工程师”。它不分行业：只要存在真实客户、明确或待梳理的业务任务，以及希望达成的交付目标，就可以采用这种协同方式。核心不是先做演示，而是在客户实际场景中把需求拆成可执行任务，确定 AI 能参与的环节，验证结果，并让它进入日常工作流程。</p>
@@ -41,8 +54,8 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
     <section className="serviceStart"><div><p className="detailKicker">START WITH WHAT YOU HAVE</p><h2>不用资料齐全，<em>先发已有内容。</em></h2></div><div><p>下面任意一类资料都可以作为开始。我们先看范围，再确认适合的工作方式。</p><ul>{service.inputs.map((item) => <li key={item}>{item}</li>)}</ul></div></section>
     <section className="serviceProcess"><p className="detailKicker">HOW WE WORK</p><h2>从资料到交付，<em>每一步都可核对。</em></h2><div>{service.process.map((step, index) => <article key={step.title}><b>0{index + 1}</b><h3>{step.title}</h3><p>{step.text}</p></article>)}</div></section>
     <section className="detailBody"><div><p className="detailKicker">DELIVERABLES</p><h2>按项目范围，<em>人工确认交付内容。</em></h2></div><ul>{service.deliverables.map((item, index) => <li key={item}><b>0{index + 1}</b><span>{item}</span></li>)}</ul></section>
-    {isAiFde ? <section className="aiIndustryScenes"><div><p className="detailKicker">CROSS-INDUSTRY SCENARIOS</p><h2>不是一种行业，<br /><em>而是六类真实任务。</em></h2><span>优先从重复频率高、资料来源明确、结果可以人工核对的任务开始。</span></div><div className="aiIndustryGrid">{aiScenes.map((item, index) => <article key={item[0]}><b>0{index + 1}</b><h3>{item[0]}</h3><p>{item[1]}</p><small>{item[2]}</small></article>)}</div></section> : <section className="serviceCases"><div><p className="detailKicker">RELATED WORK</p><h2>从案例里看，<em>我们怎样把事做清楚。</em></h2></div><div className="serviceCaseGrid">{relatedCases.map((item) => item && <a href={`/cases/${item.slug}`} key={item.slug}><img src={item.image} alt={item.title} /><small>{item.tag}</small><h3>{item.title}</h3><p>{item.summary}</p><span>查看案例 →</span></a>)}</div></section>}
+    {isAiFde ? <section className="aiIndustryScenes"><div><p className="detailKicker">CROSS-INDUSTRY SCENARIOS</p><h2>不是一种行业，<br /><em>而是六类真实任务。</em></h2><span>优先从重复频率高、资料来源明确、结果可以人工核对的任务开始。</span></div><div className="aiIndustryGrid">{aiScenes.map((item, index) => <article key={item[0]}><b>0{index + 1}</b><h3>{item[0]}</h3><p>{item[1]}</p><small>{item[2]}</small></article>)}</div></section> : isAiAgent ? <section className="agentSolutions"><div><p className="detailKicker">THREE DELIVERY TYPES</p><h2>三种常见智能体，<br /><em>对应三类交付。</em></h2></div><div>{agentSolutions.map((item, index) => <article key={item[0]}><b>0{index + 1}</b><h3>{item[0]}</h3><p>{item[1]}</p><small>{item[2]}</small></article>)}</div></section> : <section className="serviceCases"><div><p className="detailKicker">RELATED WORK</p><h2>从案例里看，<em>我们怎样把事做清楚。</em></h2></div><div className="serviceCaseGrid">{relatedCases.map((item) => item && <a href={`/cases/${item.slug}`} key={item.slug}><img src={item.image} alt={item.title} /><small>{item.tag}</small><h3>{item.title}</h3><p>{item.summary}</p><span>查看案例 →</span></a>)}</div></section>}
     <section className="serviceBoundary"><p className="detailKicker">REVIEW & RESPONSIBILITY</p><h2>我们做支持，<em>关键决定要确认。</em></h2><p>{service.boundary}</p></section>
-    <section className="detailContact"><p>开始合作</p><h2>{service.cta}</h2><a href={`${isAiFde ? "/ai-applications" : "/design-detailing"}#contact`}>提交项目需求 →</a></section>
+    <section className="detailContact"><p>开始合作</p><h2>{service.cta}</h2><a href={`${isAiApplication ? "/ai-applications" : "/design-detailing"}#contact`}>提交项目需求 →</a></section>
   </main>;
 }

@@ -30,7 +30,7 @@ const diagrams:Record<string,string>={
 };
 
 export function generateStaticParams(){return Object.keys(productData).map(slug=>({slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const item=productData[slug];return {title:item?`${item.name} | Shanjiang Modular Housing`:"Product | Shanjiang Modular Housing",description:item?.description};}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const item=productData[slug];const image=slug==="premium-house"?"/product-premium-house-card.png":`/product-${slug}.webp`;return item?{title:`${item.name} | Shanjiang Modular Housing`,description:item.description,alternates:{canonical:`/en/products/${slug}`},openGraph:{title:item.name,description:item.description,images:[image]},twitter:{card:"summary_large_image",title:item.name,description:item.description,images:[image]}}:{};}
 
 export default async function EnglishProductPage({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;const item=productData[slug];if(!item)notFound();

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Tekla钢结构深化服务｜钢结构建模与加工图服务",
   description: "山江提供Tekla Structures三维建模、钢结构深化、加工图和施工图支持。20年钢结构经验，7年Tekla使用经验，服务钢结构公司、建筑承包商和模块化建筑企业。",
   keywords: ["Tekla钢结构深化", "Tekla建模服务", "钢结构加工图", "钢结构施工图", "钢结构深化外包", "Tekla Structures建模"],
-  alternates: { canonical: "https://griegojaquish-bot.github.io/tekla-steel-detailing-cn" },
+  alternates: { canonical: "https://shanjiang.asia/tekla-steel-detailing-cn" },
 };
 
 const services = [

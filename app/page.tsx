@@ -3,7 +3,7 @@ import "./portal.css";
 import "./portal-extras.css";
 
 export const metadata: Metadata = {
-  title: "山江设计与智能应用｜设计深化与 AI 应用",
+  title: { absolute: "山江设计与智能应用｜设计深化与 AI 应用" },
   description: "山江设计与智能应用分为设计深化与 AI 应用两大业务板块，分别承接工程设计深化和企业 AI 场景落地。",
 };
 
