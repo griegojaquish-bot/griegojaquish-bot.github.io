@@ -1,0 +1,9 @@
+/* 仅手机端：图片完整展示、卡片不叠层，并确保二维码清晰可扫。 */
+@media (max-width:850px){
+  .designCase,.designCase.feature{min-height:0;aspect-ratio:auto;overflow:hidden;background:#18352e}
+  .designCase picture{display:block;background:#20342d}
+  .designCase img{position:relative;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;display:block;background:#20342d}
+  .designCase:after{display:none}
+  .designCase>div{position:relative;margin:0;padding:24px 22px 28px;min-height:0;background:#18352e}
+  .wechatQr img{width:112px;height:112px;max-width:none;min-width:112px;opacity:1;visibility:visible;object-fit:contain;background:#fff;padding:5px;border-radius:2px}
+}

@@ -4,7 +4,7 @@ export type Service = {
   deliverables: string[]; audience: string[]; inputs: string[]; process: ProcessStep[];
   boundary: string; cta: string; caseSlugs: string[];
 };
-export type DesignCase = { slug: string; image: string; title: string; tag: string; summary: string; focus: string[]; };
+export type DesignCase = { slug: string; image: string; mobileImage?: string; title: string; tag: string; summary: string; focus: string[]; };
 
 export const services: Service[] = [
   {
@@ -44,11 +44,11 @@ export const designCases: DesignCase[] = [
   { slug: "steel-site-reference", image: "/tekla/tekla-steel-frame.jpg", title: "钢结构现场参考", tag: "设计与现场衔接", summary: "从图纸阶段关注构件组织、加工条件和安装逻辑，让深化更贴近实际。", focus: ["构件组织", "加工条件", "安装逻辑"] },
   { slug: "curved-model", image: "/tekla/tekla-bridge-model.jpg", title: "弧形结构模型", tag: "复杂曲线构件建模", summary: "通过三维模型梳理弧形构件、支撑与连接关系，为后续深化表达提供基础。", focus: ["曲线构件", "支撑体系", "连接关系"] },
   { slug: "roof-model", image: "/tekla/tekla-roof-model.jpg", title: "钢屋架模型", tag: "屋盖结构构件组织", summary: "以模型展示屋盖构件布置与整体关系，便于复核构件组织和深化范围。", focus: ["屋盖布置", "构件编号", "整体关系"] },
-  { slug: "brand-space", image: "/real-gallery/project-brand-space.png", title: "品牌空间组合", tag: "项目空间参考", summary: "用于展示多层组合、悬挑支撑与立面表达等空间组织方向。", focus: ["多层组合", "悬挑支撑", "立面表达"] },
-  { slug: "park-space", image: "/real-gallery/project-park-space.png", title: "园区公共空间", tag: "项目空间参考", summary: "用于展示园区尺度下的模块组合、动线与多层空间层次。", focus: ["模块组合", "园区动线", "空间层次"] },
-  { slug: "tourism-camp", image: "/real-gallery/project-tourism-camp.png", title: "文旅营地空间", tag: "项目空间参考", summary: "用于展示营地单元、公共空间及不同建筑形体的组合关系。", focus: ["营地单元", "公共空间", "形体组合"] },
-  { slug: "site-camp-layout", image: "/real-gallery/project-campus-aerial.png", title: "大型营地布局", tag: "项目空间参考", summary: "用于展示成组单元、功能分区和总体布局的空间组织方向。", focus: ["功能分区", "成组单元", "总体布局"] },
-  { slug: "colourful-pavilion", image: "/project-colourful-pavilion.jpg", title: "彩色公共空间", tag: "项目空间参考", summary: "用于展示色彩、体块与公共活动界面的方案表达方向。", focus: ["色彩策略", "体块关系", "公共界面"] },
-  { slug: "cube-office", image: "/project-cube-office.png", title: "模块办公单元", tag: "项目空间参考", summary: "用于展示标准单元组合、外立面与使用空间的表达方向。", focus: ["单元组合", "外立面", "使用空间"] },
-  { slug: "mountain-valley-camp", image: "/project-mountain-valley-camp.jpg", title: "山谷营地空间", tag: "项目空间参考", summary: "用于展示自然场地中的营地单元、公共空间及不同建筑形体的组合关系。", focus: ["场地关系", "营地单元", "公共活动空间"] },
+  { slug: "brand-space", image: "/real-gallery/project-brand-space.png", mobileImage: "/real-gallery/project-brand-space-mobile.webp", title: "品牌空间组合", tag: "项目空间参考", summary: "用于展示多层组合、悬挑支撑与立面表达等空间组织方向。", focus: ["多层组合", "悬挑支撑", "立面表达"] },
+  { slug: "park-space", image: "/real-gallery/project-park-space.png", mobileImage: "/real-gallery/project-park-space-mobile.webp", title: "园区公共空间", tag: "项目空间参考", summary: "用于展示园区尺度下的模块组合、动线与多层空间层次。", focus: ["模块组合", "园区动线", "空间层次"] },
+  { slug: "tourism-camp", image: "/real-gallery/project-tourism-camp.png", mobileImage: "/real-gallery/project-tourism-camp-mobile.webp", title: "文旅营地空间", tag: "项目空间参考", summary: "用于展示营地单元、公共空间及不同建筑形体的组合关系。", focus: ["营地单元", "公共空间", "形体组合"] },
+  { slug: "site-camp-layout", image: "/real-gallery/project-campus-aerial.png", mobileImage: "/real-gallery/project-campus-aerial-mobile.webp", title: "大型营地布局", tag: "项目空间参考", summary: "用于展示成组单元、功能分区和总体布局的空间组织方向。", focus: ["功能分区", "成组单元", "总体布局"] },
+  { slug: "colourful-pavilion", image: "/project-colourful-pavilion.jpg", mobileImage: "/project-colourful-pavilion-mobile.webp", title: "彩色公共空间", tag: "项目空间参考", summary: "用于展示色彩、体块与公共活动界面的方案表达方向。", focus: ["色彩策略", "体块关系", "公共界面"] },
+  { slug: "cube-office", image: "/project-cube-office.png", mobileImage: "/project-cube-office-mobile.webp", title: "模块办公单元", tag: "项目空间参考", summary: "用于展示标准单元组合、外立面与使用空间的表达方向。", focus: ["单元组合", "外立面", "使用空间"] },
+  { slug: "mountain-valley-camp", image: "/project-mountain-valley-camp.jpg", mobileImage: "/project-mountain-valley-camp-mobile.webp", title: "山谷营地空间", tag: "项目空间参考", summary: "用于展示自然场地中的营地单元、公共空间及不同建筑形体的组合关系。", focus: ["场地关系", "营地单元", "公共活动空间"] },
 ];

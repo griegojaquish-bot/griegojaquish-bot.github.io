@@ -11,6 +11,24 @@
 .designNav{height:92px}.designBrand{gap:13px;font-size:18px}.designBrand>b{width:44px;height:44px;font-size:14px}.designBrand small{font-size:8px}.designNav nav{gap:34px}.designNav nav>a{font-size:15px}.designNav .designNavCta{padding:16px 20px}.designFooter{padding:48px 7vw;font-size:14px}.designFooter .designBrand{font-size:18px}.designFooter .designBrand small{font-size:8px}.designFooter small{font-size:12px}@media(max-width:850px){.designNav{height:68px}.designBrand{font-size:16px;gap:11px}.designBrand>b{width:38px;height:38px;font-size:13px}.designBrand small{font-size:7px}.designNav nav{gap:10px}.designNav nav>a{font-size:13px}.designNav .designNavCta{padding:12px 13px}.designFooter{font-size:11px}}
 .designHero{height:calc(100vh - 92px)}@media(max-width:850px){.designHero{height:650px}}
 
+/* 必须置于末尾，覆盖旧叠层规则。 */
+@media(max-width:850px){
+  .designCase,.designCase.feature{overflow:hidden;background:#18352e}
+  .designCase picture{display:block;background:#20342d}
+  .designCase:after{display:none}
+  .designCase>div{position:relative;margin:0;padding:24px 22px 28px;background:#18352e}
+  .wechatQr img{width:112px;height:112px;max-width:none;min-width:112px;opacity:1;visibility:visible;object-fit:contain;background:#fff;padding:5px;border-radius:2px}
+}
+
+/* 手机案例改为图片与文字顺序排布：完整显示且不再越界叠层。 */
+@media(max-width:850px){
+  .designCase,.designCase.feature{overflow:hidden;background:#18352e}
+  .designCase picture{display:block;background:#20342d}
+  .designCase:after{display:none}
+  .designCase>div{position:relative;margin:0;padding:24px 22px 28px;background:#18352e}
+  .wechatQr img{width:112px;height:112px;max-width:none;min-width:112px;opacity:1;visibility:visible;object-fit:contain;background:#fff;padding:5px;border-radius:2px}
+}
+
 .designIntroVideo{display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:center;padding:95px 10vw;background:#e4e8e0}.designIntroVideo h2{margin:0;font-size:clamp(34px,3.9vw,58px);line-height:1.12;letter-spacing:-.06em}.designIntroVideo h2 em{font-style:normal;color:var(--warm)}.designIntroVideo>div>p:not(.designKicker){margin:28px 0 0;color:#58645e;font-size:14px;line-height:1.95}.designIntroVideo video{display:block;width:100%;background:#10251f;box-shadow:0 20px 45px rgba(20,35,30,.16)}@media(max-width:850px){.designIntroVideo{grid-template-columns:1fr;gap:30px;padding:72px 7vw}.designIntroVideo h2{font-size:clamp(32px,8vw,44px)}}
 
 /* 手机上的案例图片优先完整呈现，不以裁切换取卡片高度。 */
