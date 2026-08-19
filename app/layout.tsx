@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./project.css";
 import "./contact.css";
+import "./design-detail.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,21 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://griegojaquish-bot.github.io"),
+  metadataBase: new URL("https://shanjiang.asia"),
   title: {
-    default: "广州山江钢结构｜模块化建筑与集成房屋厂家",
-    template: "%s｜广州山江钢结构",
+    default: "山江设计服务｜钢结构设计与详图支持",
+    template: "%s｜山江设计服务",
   },
-  description: "广州山江钢结构，提供打包箱、快拼箱、工地板房、模块化办公与营地空间的一站式设计、生产和安装服务。",
-  keywords: ["广州集成房屋", "从化打包箱", "模块化建筑", "工地板房", "快拼箱", "活动板房", "集成房屋"],
+  description: "山江设计服务专注钢结构设计表达、Tekla 三维建模、详图深化与加工图支持，按项目范围人工报价。",
+  keywords: ["Tekla钢结构深化", "钢结构详图", "钢结构加工图", "Tekla建模服务", "钢结构设计", "施工图深化"],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "zh_CN",
-    url: "https://griegojaquish-bot.github.io",
-    siteName: "广州山江钢结构",
-    title: "广州山江钢结构｜模块化建筑与集成房屋厂家",
-    description: "打包箱、快拼箱、工地板房与模块化空间的一站式交付服务。",
+    url: "https://shanjiang.asia",
+    siteName: "山江设计服务",
+    title: "山江设计服务｜钢结构设计与详图支持",
+    description: "钢结构设计表达、Tekla 建模、详图深化与加工图支持。",
   },
   icons: {
     icon: "/favicon.svg",
@@ -53,8 +54,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "广州山江钢结构",
-              url: "https://griegojaquish-bot.github.io",
+              name: "山江设计服务",
+              url: "https://shanjiang.asia",
               telephone: "+86-13539957289",
               email: "13120056@qq.com",
               address: {
@@ -64,7 +65,7 @@ export default function RootLayout({
                 streetAddress: "太平镇太平村渡头庄14号一楼（自主申报）",
                 addressCountry: "CN",
               },
-              description: "模块化建筑、打包箱、快拼箱和工地板房的一站式设计、生产与安装服务。",
+              description: "钢结构设计表达、Tekla 三维建模、详图深化与加工图支持。",
             }),
           }}
         />
