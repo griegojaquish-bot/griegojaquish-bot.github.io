@@ -1,11 +1,11 @@
-export type Service = { number: string; slug: string; title: string; summary: string; deliverables: string[]; };
+export type Service = { number: string; slug: string; title: string; image: string; summary: string; deliverables: string[]; };
 export type DesignCase = { slug: string; image: string; title: string; tag: string; summary: string; focus: string[]; };
 
 export const services: Service[] = [
-  { number: "01", slug: "drawing-expression", title: "方案设计与图纸表达", summary: "将项目需求转化为用于沟通、确认与施工参考的图纸表达。", deliverables: ["平面、立面与剖面表达", "节点与构造示意", "方案沟通图", "施工参考图纸整理"] },
-  { number: "02", slug: "tekla-modeling", title: "Tekla 三维建模", summary: "依据结构资料建立三维模型，用于构件组织、节点复核及深化协调。", deliverables: ["钢框架与构件建模", "节点及连接关系梳理", "模型复核支持", "构件与装配组织"] },
-  { number: "03", slug: "shop-drawings", title: "详图深化与加工图", summary: "整理构件、装配和材料信息，服务车间加工与现场安装沟通。", deliverables: ["构件图与装配图", "材料与螺栓信息", "图纸版本整理", "加工及安装沟通支持"] },
-  { number: "04", slug: "ai-fde", title: "AI FDE 客户协同", summary: "AI FDE 是 AI Forward Deployed Engineer（AI 现场部署工程师）：不限定行业，在真实客户场景中梳理任务、验证方案并推动交付落地。", deliverables: ["客户任务与资料梳理", "AI 辅助方案验证", "交付过程协同", "反馈与持续优化"] },
+  { number: "01", slug: "drawing-expression", title: "方案设计与图纸表达", image: "/tekla/tekla-project-visual.jpg", summary: "将项目需求转化为用于沟通、确认与施工参考的图纸表达。", deliverables: ["平面、立面与剖面表达", "节点与构造示意", "方案沟通图", "施工参考图纸整理"] },
+  { number: "02", slug: "tekla-modeling", title: "Tekla 三维建模", image: "/tekla/tekla-stair-detail.jpg", summary: "依据结构资料建立三维模型，用于构件组织、节点复核及深化协调。", deliverables: ["钢框架与构件建模", "节点及连接关系梳理", "模型复核支持", "构件与装配组织"] },
+  { number: "03", slug: "shop-drawings", title: "详图深化与加工图", image: "/tekla/tekla-drawing.jpg", summary: "整理构件、装配和材料信息，服务车间加工与现场安装沟通。", deliverables: ["构件图与装配图", "材料与螺栓信息", "图纸版本整理", "加工及安装沟通支持"] },
+  { number: "04", slug: "ai-fde", title: "AI FDE 客户协同", image: "/tekla/tekla-bridge-model.jpg", summary: "AI FDE 是 AI Forward Deployed Engineer（AI 现场部署工程师）：不限定行业，在真实客户场景中梳理任务、验证方案并推动交付落地。", deliverables: ["客户任务与资料梳理", "AI 辅助方案验证", "交付过程协同", "反馈与持续优化"] },
 ];
 
 export const designCases: DesignCase[] = [
