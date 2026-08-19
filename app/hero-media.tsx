@@ -13,5 +13,5 @@ export default function HeroMedia() {
     return () => query.removeEventListener("change", update);
   }, []);
 
-  return <div className="designHeroImage">{showVideo && <video autoPlay muted loop playsInline preload="metadata" poster="/shanjiang-hero-hd.png"><source media="(max-width: 850px)" src="/shanjiang-hero-motion-mobile-v1.mp4" type="video/mp4" /><source src="/shanjiang-hero-motion-v4.mp4" type="video/mp4" /></video>}</div>;
+  return <div className="designHeroImage">{showVideo && <video autoPlay muted loop playsInline preload="metadata" poster="/shanjiang-hero-mobile-v2.webp"><source media="(max-width: 850px)" src="/shanjiang-hero-motion-mobile-fast-v2.mp4" type="video/mp4" /><source src="/shanjiang-hero-motion-v4.mp4" type="video/mp4" /></video>}</div>;
 }
