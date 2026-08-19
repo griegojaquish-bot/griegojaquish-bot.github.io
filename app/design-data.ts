@@ -29,11 +29,11 @@ export const services: Service[] = [
     deliverables: ["构件图与装配图", "材料与螺栓信息", "图纸版本整理", "加工及安装沟通支持"], boundary: "图纸服务以已确认的设计资料为基础；加工前应由项目相关方复核图纸、材料和现场条件，最终执行以项目确认版本为准。", cta: "发来图纸或模型，先确认深化与出图范围", caseSlugs: ["landscape-bridge-drawing", "steel-site-reference", "curved-stair"]
   },
   {
-    number: "04", slug: "ai-fde", title: "AI FDE 客户协同", image: "/tekla/tekla-bridge-model.jpg", summary: "AI FDE 是 AI Forward Deployed Engineer（AI 现场部署工程师）：不限定行业，在真实客户场景中梳理任务、验证方案并推动交付落地。",
+    number: "04", slug: "ai-fde", title: "企业 AI 智能体与协同", image: "/ai-fde-all-industries-poster.webp", summary: "面向所有行业，把 AI 智能体接入客服、销售、资料、网站、小程序、运营与交付等真实业务流程。",
     audience: ["有客户咨询、资料整理或报价交付等重复任务的团队", "希望从一个真实业务场景开始使用 AI 的企业", "需要保留人工复核、逐步验证 AI 工作方式的负责人"],
     inputs: ["一个最费时间或最容易遗漏的真实任务", "现有资料、流程和使用人员的基本情况", "希望改善的结果及必要的人工把关要求"],
     process: [{ title: "选定任务", text: "从一个真实客户任务开始，明确目标、资料和当前卡点。" }, { title: "试运行验证", text: "让 AI 参与合适环节，用真实任务检验结果并保留人工复核。" }, { title: "纳入流程", text: "把有效的方法整理为团队可持续使用的工作方式。" }],
-    deliverables: ["客户任务与资料梳理", "AI 辅助方案验证", "交付过程协同", "反馈与持续优化"], boundary: "AI 用于辅助整理、归纳和协同；涉及专业判断、合同承诺、工程安全或对外发布的内容，仍需由客户和相应专业人员审核确认。", cta: "发一个最费时间的真实任务，先判断是否适合 AI FDE", caseSlugs: ["steel-site-reference", "landscape-bridge-drawing", "roof-model"]
+    deliverables: ["客户任务与资料梳理", "AI 辅助方案验证", "网站与小程序流程衔接", "反馈与持续优化"], boundary: "AI 用于辅助整理、归纳和协同；涉及专业判断、合同承诺、安全或对外发布的内容，仍需由客户和相应专业人员审核确认。", cta: "发一个最费时间的真实任务，先判断怎样接入 AI", caseSlugs: []
   },
 ];
 
