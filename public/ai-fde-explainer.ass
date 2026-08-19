@@ -14,21 +14,21 @@ Style: Label,Microsoft YaHei,20,&H003A6AED,&H000000FF,&H00142620,&H96000000,1,0,
 
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
-Dialogue: 0,0:00:00.00,0:00:13.00,Label,,0,0,0,,AI FDE EXPLAINER
-Dialogue: 0,0:00:00.00,0:00:13.00,Title,,0,0,0,,AI FDE 是什么？
-Dialogue: 0,0:00:00.00,0:00:13.00,Copy,,0,0,0,,不是单独交付一个 AI 工具，而是贴着客户做交付。
-Dialogue: 0,0:00:13.00,0:00:27.00,Label,,0,0,0,,THE NAME
-Dialogue: 0,0:00:13.00,0:00:27.00,Accent,,0,0,0,,FDE = Forward Deployed Engineer
-Dialogue: 0,0:00:13.00,0:00:27.00,Copy,,0,0,0,,把 AI 能力带到客户真实业务中：梳理问题、验证结果、优化流程。
-Dialogue: 0,0:00:27.00,0:00:40.00,Label,,0,0,0,,ANY INDUSTRY
-Dialogue: 0,0:00:27.00,0:00:40.00,Title,,0,0,0,,AI FDE 不分行业
-Dialogue: 0,0:00:27.00,0:00:40.00,Copy,,0,0,0,,只要有客户和真实任务，就能寻找 AI 参与并产生价值的环节。
-Dialogue: 0,0:00:40.00,0:00:55.00,Label,,0,0,0,,START WITH THE TASK
-Dialogue: 0,0:00:40.00,0:00:55.00,Title,,0,0,0,,从最费时间的任务开始
-Dialogue: 0,0:00:40.00,0:00:55.00,Copy,,0,0,0,,重复沟通、资料整理、报价、交付、运营或售后，都是可梳理的真实场景。
-Dialogue: 0,0:00:55.00,0:01:10.00,Label,,0,0,0,,HOW IT WORKS
-Dialogue: 0,0:00:55.00,0:01:10.00,Title,,0,0,0,,用真实任务验证
-Dialogue: 0,0:00:55.00,0:01:10.00,Copy,,0,0,0,,梳理需求 → 确定参与环节 → 验证结果 → 保留人工复核点
-Dialogue: 0,0:01:10.00,0:01:30.00,Label,,0,0,0,,THE DIFFERENCE
-Dialogue: 0,0:01:10.00,0:01:30.00,Title,,0,0,0,,不是演示，是可持续的帮助
-Dialogue: 0,0:01:10.00,0:01:30.00,Copy,,0,0,0,,让 AI 帮助企业更快响应客户、更清楚管理资料、更稳定完成交付。
+Dialogue: 0,0:00:00.00,0:00:12.00,Label,,0,0,0,,AI FDE EXPLAINER
+Dialogue: 0,0:00:00.00,0:00:12.00,Title,,0,0,0,,AI FDE 是什么？
+Dialogue: 0,0:00:00.00,0:00:12.00,Copy,,0,0,0,,不是交付工具就结束，而是贴着客户做交付。
+Dialogue: 0,0:00:12.00,0:00:24.00,Label,,0,0,0,,THE NAME
+Dialogue: 0,0:00:12.00,0:00:24.00,Accent,,0,0,0,,FDE = F · D · E
+Dialogue: 0,0:00:12.00,0:00:24.00,Copy,,0,0,0,,读作 F、D、E。Forward Deployed Engineer，前置部署工程师。
+Dialogue: 0,0:00:24.00,0:00:36.00,Label,,0,0,0,,ANY INDUSTRY
+Dialogue: 0,0:00:24.00,0:00:36.00,Title,,0,0,0,,AI FDE 不分行业
+Dialogue: 0,0:00:24.00,0:00:36.00,Copy,,0,0,0,,只要有客户和真实任务，就能找到 AI 参与并产生价值的环节。
+Dialogue: 0,0:00:36.00,0:00:48.00,Label,,0,0,0,,STEP 01
+Dialogue: 0,0:00:36.00,0:00:48.00,Title,,0,0,0,,先梳理真实任务
+Dialogue: 0,0:00:36.00,0:00:48.00,Copy,,0,0,0,,从客户目标、资料和卡点开始，不先挑工具。
+Dialogue: 0,0:00:48.00,0:01:00.00,Label,,0,0,0,,STEP 02
+Dialogue: 0,0:00:48.00,0:01:00.00,Title,,0,0,0,,用真实任务验证
+Dialogue: 0,0:00:48.00,0:01:00.00,Copy,,0,0,0,,任务拆解 → AI 辅助 → 验证结果 → 人工复核
+Dialogue: 0,0:01:00.00,0:01:12.00,Label,,0,0,0,,STEP 03
+Dialogue: 0,0:01:00.00,0:01:12.00,Title,,0,0,0,,形成可持续的帮助
+Dialogue: 0,0:01:00.00,0:01:12.00,Copy,,0,0,0,,更快响应客户，更清楚管理资料，更稳定完成交付。

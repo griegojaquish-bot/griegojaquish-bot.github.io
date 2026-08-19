@@ -18,7 +18,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       <p className="detailKicker">AI FDE EXPLAINED</p>
       <h2>AI FDE 是什么？<br /><em>不是单独卖 AI 工具。</em></h2>
       <p><b>AI FDE</b> 是 <b>AI Forward Deployed Engineer</b> 的简称，可理解为“AI 现场部署工程师”。它不分行业：只要存在真实客户、明确或待梳理的业务任务，以及希望达成的交付目标，就可以采用这种协同方式。核心不是先做演示，而是在客户实际场景中把需求拆成可执行任务，确定 AI 能参与的环节，验证结果，并让它进入日常工作流程。</p>
-      <div className="aiFdeVideo"><div><small>AI FDE EXPLAINER</small><h3>用 90 秒看懂 AI FDE</h3><p>这段完整讲解说明 AI FDE 的含义、适用范围和实际工作方式。</p></div><video controls preload="metadata" poster="/tekla/tekla-bridge-model.jpg"><source src="/ai-fde-explainer-v3.mp4" type="video/mp4" />你的浏览器暂不支持视频播放。</video></div>
+      <div className="aiFdeVideo"><div><small>AI FDE EXPLAINER</small><h3>用约 1 分钟看懂 AI FDE</h3><p>含中文旁白、英文读法和动态工程画面，说明 AI FDE 的含义、适用范围和实际工作方式。</p></div><video controls preload="metadata" poster="/tekla/tekla-bridge-model.jpg"><source src="/ai-fde-explainer-v4.mp4" type="video/mp4" />你的浏览器暂不支持视频播放。</video></div>
       <div className="aiFdeDetailGrid"><article><b>01</b><h3>从客户任务开始</h3><p>先看客户的业务资料、沟通方式、交付节点和实际难点，而不是先挑一个 AI 工具。</p></article><article><b>02</b><h3>把 AI 放进合适环节</h3><p>让 AI 辅助资料整理、信息核对、问题归纳或任务协同；关键专业判断仍由客户团队和专业人员把关。</p></article><article><b>03</b><h3>以能用为交付标准</h3><p>经过实际任务验证后，形成清晰的使用方式、人工复核点和可持续优化的客户工作流程。</p></article></div>
       <div className="aiFdeCompare"><div><small>不是</small><b>只演示 AI 能生成什么</b></div><div><small>而是</small><b>让 AI 在真实客户流程中产生可核对的帮助</b></div></div>
     </section>}
