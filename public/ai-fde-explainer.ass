@@ -1,0 +1,31 @@
+[Script Info]
+Title: AI FDE 说明短片
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Title,Microsoft YaHei,72,&H00FFFFFF,&H000000FF,&H00142620,&H96000000,1,0,0,0,100,100,1,0,1,2,0,2,100,100,116,1
+Style: Accent,Microsoft YaHei,62,&H003A6AED,&H000000FF,&H00142620,&H96000000,1,0,0,0,100,100,1,0,1,2,0,2,100,100,210,1
+Style: Copy,Microsoft YaHei,34,&H00E8F0EB,&H000000FF,&H00142620,&H96000000,0,0,0,0,100,100,0,0,1,1,0,2,100,100,300,1
+Style: Label,Microsoft YaHei,20,&H003A6AED,&H000000FF,&H00142620,&H96000000,1,0,0,0,100,100,3,0,1,1,0,8,100,100,75,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:06.00,Label,,0,0,0,,AI FDE EXPLAINER
+Dialogue: 0,0:00:00.00,0:00:06.00,Title,,0,0,0,,AI FDE 是什么？
+Dialogue: 0,0:00:00.00,0:00:06.00,Copy,,0,0,0,,不是一个单独的软件功能，而是一种贴着客户做交付的方式。
+Dialogue: 0,0:00:06.00,0:00:14.00,Label,,0,0,0,,THE NAME
+Dialogue: 0,0:00:06.00,0:00:14.00,Accent,,0,0,0,,FDE = Forward Deployed Engineer
+Dialogue: 0,0:00:06.00,0:00:14.00,Copy,,0,0,0,,可理解为“现场部署工程师”：把技术能力带到客户真实工作中。
+Dialogue: 0,0:00:14.00,0:00:22.00,Label,,0,0,0,,ANY INDUSTRY
+Dialogue: 0,0:00:14.00,0:00:22.00,Title,,0,0,0,,AI FDE 不分行业
+Dialogue: 0,0:00:14.00,0:00:22.00,Copy,,0,0,0,,只要有真实客户、业务任务和交付目标，就能采用这种协同方式。
+Dialogue: 0,0:00:22.00,0:00:31.00,Label,,0,0,0,,HOW IT WORKS
+Dialogue: 0,0:00:22.00,0:00:31.00,Title,,0,0,0,,从客户任务开始
+Dialogue: 0,0:00:22.00,0:00:31.00,Copy,,0,0,0,,梳理需求 → 确定 AI 参与环节 → 真实任务验证 → 纳入工作流程
+Dialogue: 0,0:00:31.00,0:00:40.00,Label,,0,0,0,,THE DIFFERENCE
+Dialogue: 0,0:00:31.00,0:00:40.00,Title,,0,0,0,,不只演示 AI 能做什么
+Dialogue: 0,0:00:31.00,0:00:40.00,Copy,,0,0,0,,而是让 AI 在客户实际流程中，形成可核对、可持续的帮助。
