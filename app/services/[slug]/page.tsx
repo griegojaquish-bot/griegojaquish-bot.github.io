@@ -25,7 +25,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
     {isAiFde && <section className="aiFdeDetail">
       <p className="detailKicker">AI FDE EXPLAINED</p><h2>AI FDE 是什么？<br /><em>不是单独卖 AI 工具。</em></h2>
       <p><b>AI FDE</b> 是 <b>AI Forward Deployed Engineer</b> 的简称，可理解为“AI 现场部署工程师”。它不分行业：只要存在真实客户、明确或待梳理的业务任务，以及希望达成的交付目标，就可以采用这种协同方式。核心不是先做演示，而是在客户实际场景中把需求拆成可执行任务，确定 AI 能参与的环节，验证结果，并让它进入日常工作流程。</p>
-      <div className="aiFdeVideo"><div><small>AI FDE EXPLAINER</small><h3>用约 1 分钟看懂 AI FDE</h3><p>含中文旁白、英文读法和动态工程画面，说明 AI FDE 的含义、适用范围和实际工作方式。</p></div><video controls preload="metadata" poster="/tekla/tekla-bridge-model.jpg"><source src="/ai-fde-explainer-v4.mp4" type="video/mp4" />你的浏览器暂不支持视频播放。</video></div>
+      <div className="aiFdeVideo"><div><small>AI FDE EXPLAINER</small><h3>用约 1 分钟看懂 AI FDE</h3><p>含中文旁白、英文读法和动态工程画面，说明 AI FDE 的含义、适用范围和实际工作方式。</p></div><video controls playsInline preload="none" poster="/tekla/tekla-bridge-model.jpg"><source media="(max-width: 850px)" src="/ai-fde-explainer-mobile-fast-v5.mp4" type="video/mp4" /><source src="/ai-fde-explainer-v4.mp4" type="video/mp4" />你的浏览器暂不支持视频播放。</video></div>
       <div className="aiFdeCompare"><div><small>不是</small><b>只演示 AI 能生成什么</b></div><div><small>而是</small><b>让 AI 在真实客户流程中产生可核对的帮助</b></div></div>
     </section>}
     <section className="serviceFit" id="start"><div><p className="detailKicker">WHO THIS IS FOR</p><h2>先判断，<em>是否适合你的项目。</em></h2></div><ul>{service.audience.map((item, index) => <li key={item}><b>0{index + 1}</b><span>{item}</span></li>)}</ul></section>
