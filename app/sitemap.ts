@@ -5,6 +5,8 @@ import { projects } from "./projects/data";
 import { articles } from "./news/data";
 import { articles as englishArticles } from "./en/news/data";
 
+export const dynamic = "force-static";
+
 const base = "https://shanjiang.asia";
 
 export default function sitemap(): MetadataRoute.Sitemap {
