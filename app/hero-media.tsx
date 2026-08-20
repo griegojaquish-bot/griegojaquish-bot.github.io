@@ -1,17 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export default function HeroMedia() {
-  const [showVideo, setShowVideo] = useState(false);
-
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: no-preference)");
-    const update = () => setShowVideo(query.matches);
-    update();
-    query.addEventListener("change", update);
-    return () => query.removeEventListener("change", update);
-  }, []);
-
-  return <div className="designHeroImage">{showVideo && <video autoPlay muted loop playsInline preload="metadata" poster="/shanjiang-hero-mobile-v2.webp"><source media="(max-width: 850px)" src="/shanjiang-hero-motion-mobile-fast-v2.mp4" type="video/mp4" /><source src="/shanjiang-hero-motion-v4.mp4" type="video/mp4" /></video>}</div>;
+  return <div className="designHeroImage"><img src="/design-hero-cinematic-v1.jpg" alt="钢结构空间从 Tekla 节点线稿深化为落地桥梁的航拍场景" fetchPriority="high" decoding="async" /></div>;
 }
