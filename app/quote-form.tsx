@@ -34,6 +34,8 @@ export default function QuoteForm({ variant = "design" }: { variant?: "design" |
             <option>方案设计 / CAD 图纸表达</option>
             <option>Tekla 三维建模</option>
             <option>钢结构详图 / 加工图</option>
+            <option>竣工图整理</option>
+            <option>工程蓝图出图</option>
             <option>其他设计与深化支持</option>
           </>}
         </select>

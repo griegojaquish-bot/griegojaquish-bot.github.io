@@ -7,7 +7,8 @@ import "../mobile-fixes.css";
 
 export const metadata: Metadata = { title: "设计深化｜钢结构设计与详图支持", description: "钢结构设计表达、Tekla 建模、详图深化与加工图支持。提交图纸需求，人工评估后报价。" };
 
-const designServices = services.filter((service) => service.slug !== "ai-fde");
+const designServiceSlugs = new Set(["drawing-expression", "tekla-modeling", "shop-drawings", "as-built-drawings", "engineering-blueprint-printing"]);
+const designServices = services.filter((service) => designServiceSlugs.has(service.slug));
 const process = ["提交资料", "明确范围", "人工报价", "建模与深化", "校核出图", "配合交付"];
 const faqs = [["资料不全可以开始吗？", "可以。先把现有图纸、草图、照片或项目说明发来，我们先判断能否开展及还需补充哪些资料。"], ["怎样报价？", "不设固定套餐。根据资料完整度、结构复杂度、交付内容、修改配合和目标交期人工评估。"], ["通常能交付什么？", "按服务范围提供模型、构件图、装配图、材料信息或沟通图；最终以项目确认清单为准。"], ["是否支持急单和修改？", "请在提交时说明目标交期。我们会先评估可行性；修改范围与配合方式在开始前一并确认。"], ["工程责任如何划分？", "设计、建模和图纸服务均以确认资料为依据；结构计算、现场条件及最终工程决定须由项目相关方和专业人员复核确认。"]];
 

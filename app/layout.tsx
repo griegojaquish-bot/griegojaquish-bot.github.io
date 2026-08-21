@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "山江设计与智能应用｜设计深化与 AI 应用",
     template: "%s｜山江设计与智能应用",
   },
-  description: "山江设计与智能应用分为设计深化与 AI 应用两大业务板块，按实际任务范围人工评估与报价。",
+  description: "山江设计与智能应用提供设计深化、工程竣工图与蓝图出图、AI 应用三类业务，按实际任务范围人工评估与报价。",
   keywords: ["Tekla钢结构深化", "钢结构详图", "钢结构加工图", "Tekla建模服务", "企业AI智能体", "AI工作流", "微信小程序开发", "网站建设"],
   robots: { index: true, follow: true },
   openGraph: {
