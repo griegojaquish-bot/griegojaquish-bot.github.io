@@ -29,14 +29,14 @@ export const services: Service[] = [
     deliverables: ["构件图与装配图", "材料与螺栓信息", "图纸版本整理", "加工及安装沟通支持"], boundary: "图纸服务以已确认的设计资料为基础；加工前应由项目相关方复核图纸、材料和现场条件，最终执行以项目确认版本为准。", cta: "发来图纸或模型，先确认深化与出图范围", caseSlugs: ["landscape-bridge-drawing", "steel-site-reference", "curved-stair"]
   },
   {
-    number: "04", slug: "as-built-drawings", title: "竣工图整理", image: "/tekla/tekla-drawing.jpg", summary: "依据已确认的变更、会议纪要、现场记录与验收资料，整理图纸修改位置和竣工版文件。",
+    number: "04", slug: "as-built-drawings", title: "竣工图整理", image: "/as-built-drawings-v1.jpg", summary: "依据已确认的变更、会议纪要、现场记录与验收资料，整理图纸修改位置和竣工版文件。",
     audience: ["需要将施工变更落实到现有图纸的项目团队", "需要整理竣工版图纸、PDF 或图纸目录的单位", "需要核对图号、页码与修改内容的工程管理人员"],
     inputs: ["原施工图、设计变更、签证、已确认会议纪要或现场资料", "需要修改的图号、页码及具体内容", "竣工图图框、盖章、归档或交付要求（如有）"],
     process: [{ title: "核对依据", text: "先对应原图、已确认变更、会议纪要和现场资料，列出需要修改的图号与页面。" }, { title: "标注与整理", text: "把确认的变更落实到相应图纸，统一版本、页码和修改记录。" }, { title: "复核与交付", text: "按确认清单输出竣工版图纸或 PDF，并由项目相关方核对最终现场信息。" }],
     deliverables: ["变更内容与图号页码对应表", "竣工版图纸或 PDF 整理", "图框、页码与版本统一", "归档及交付文件清单"], boundary: "竣工图整理以客户提供并确认的变更和现场资料为依据；现场实际状况、隐蔽工程及最终验收结论须由项目相关方和专业人员核实确认。", cta: "发来原图与变更资料，先确认竣工图整理范围", caseSlugs: ["landscape-bridge-drawing", "steel-site-reference"]
   },
   {
-    number: "05", slug: "engineering-blueprint-printing", title: "工程蓝图出图", image: "/tekla/tekla-drawing.jpg", summary: "提供工程图纸的蓝图打印与出图整理，按确认的文件、图幅、份数和交付要求执行。",
+    number: "05", slug: "engineering-blueprint-printing", title: "工程蓝图出图", image: "/engineering-blueprint-printing-v1.jpg", summary: "提供工程图纸的蓝图打印与出图整理，按确认的文件、图幅、份数和交付要求执行。",
     audience: ["需要工程蓝图、施工图或资料图册的项目团队", "需要按图幅、份数和装订要求准备现场资料的单位", "需要在出图前核对文件版本与打印清单的工程人员"],
     inputs: ["可打印的 PDF、CAD 或其他已确认图纸文件", "图幅、份数、单双面、装订或折叠要求", "文件版本、出图顺序及交付时间要求"],
     process: [{ title: "确认文件", text: "核对出图文件、图纸版本、图幅和打印清单，避免误用旧版。" }, { title: "工程出图", text: "按确认的图纸顺序、份数和交付要求进行蓝图打印与整理。" }, { title: "清点交付", text: "按清单核对数量与图纸顺序后交付；重要文件建议由委托方再次复核版本。" }],
