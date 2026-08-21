@@ -59,12 +59,12 @@ export const services: Service[] = [
 ];
 
 export const designCases: DesignCase[] = [
-  { slug: "landscape-structure", image: "/tekla/tekla-project-visual.jpg", title: "异形景观结构", tag: "方案形体与结构表达", summary: "以曲线空间为线索，将设计效果、结构受力与构造表达纳入同一沟通体系。", focus: ["曲线空间形体", "结构表达", "构造沟通"] },
-  { slug: "curved-stair", image: "/tekla/tekla-stair-detail.jpg", title: "曲线楼梯深化", tag: "Tekla 三维建模与节点协调", summary: "针对曲线踏步、平台连接与构件关系，建立可复核的三维深化表达。", focus: ["曲线踏步", "平台节点", "构件关系"] },
-  { slug: "landscape-bridge-drawing", image: "/tekla/tekla-drawing.jpg", title: "景观桥工程图", tag: "结构详图与图纸协同", summary: "把复杂形体转化为清晰的构件、节点和安装信息，便于项目各方核对。", focus: ["工程图表达", "节点信息", "安装核对"] },
-  { slug: "steel-site-reference", image: "/tekla/tekla-steel-frame.jpg", title: "钢结构现场参考", tag: "设计与现场衔接", summary: "从图纸阶段关注构件组织、加工条件和安装逻辑，让深化更贴近实际。", focus: ["构件组织", "加工条件", "安装逻辑"] },
-  { slug: "curved-model", image: "/tekla/tekla-bridge-model.jpg", title: "弧形结构模型", tag: "复杂曲线构件建模", summary: "通过三维模型梳理弧形构件、支撑与连接关系，为后续深化表达提供基础。", focus: ["曲线构件", "支撑体系", "连接关系"] },
-  { slug: "roof-model", image: "/tekla/tekla-roof-model.jpg", title: "钢屋架模型", tag: "屋盖结构构件组织", summary: "以模型展示屋盖构件布置与整体关系，便于复核构件组织和深化范围。", focus: ["屋盖布置", "构件编号", "整体关系"] },
+  { slug: "landscape-structure", image: "/case-landscape-structure-v2.jpg", title: "异形景观结构", tag: "方案形体与结构表达", summary: "以曲线空间为线索，将设计效果、结构受力与构造表达纳入同一沟通体系。", focus: ["曲线空间形体", "结构表达", "构造沟通"] },
+  { slug: "curved-stair", image: "/case-curved-stair-v2.jpg", title: "曲线楼梯深化", tag: "Tekla 三维建模与节点协调", summary: "针对曲线踏步、平台连接与构件关系，建立可复核的三维深化表达。", focus: ["曲线踏步", "平台节点", "构件关系"] },
+  { slug: "landscape-bridge-drawing", image: "/case-landscape-bridge-v2.jpg", title: "景观桥工程图", tag: "结构详图与图纸协同", summary: "把复杂形体转化为清晰的构件、节点和安装信息，便于项目各方核对。", focus: ["工程图表达", "节点信息", "安装核对"] },
+  { slug: "steel-site-reference", image: "/case-steel-site-v2.jpg", title: "钢结构现场参考", tag: "设计与现场衔接", summary: "从图纸阶段关注构件组织、加工条件和安装逻辑，让深化更贴近实际。", focus: ["构件组织", "加工条件", "安装逻辑"] },
+  { slug: "curved-model", image: "/case-curved-model-v2.jpg", title: "弧形结构模型", tag: "复杂曲线构件建模", summary: "通过三维模型梳理弧形构件、支撑与连接关系，为后续深化表达提供基础。", focus: ["曲线构件", "支撑体系", "连接关系"] },
+  { slug: "roof-model", image: "/case-roof-model-v2.jpg", title: "钢屋架模型", tag: "屋盖结构构件组织", summary: "以模型展示屋盖构件布置与整体关系，便于复核构件组织和深化范围。", focus: ["屋盖布置", "构件编号", "整体关系"] },
   { slug: "brand-space", image: "/real-gallery/project-brand-space.png", mobileImage: "/real-gallery/project-brand-space-mobile.webp", title: "品牌空间组合", tag: "项目空间参考", summary: "用于展示多层组合、悬挑支撑与立面表达等空间组织方向。", focus: ["多层组合", "悬挑支撑", "立面表达"] },
   { slug: "park-space", image: "/real-gallery/project-park-space.png", mobileImage: "/real-gallery/project-park-space-mobile.webp", title: "园区公共空间", tag: "项目空间参考", summary: "用于展示园区尺度下的模块组合、动线与多层空间层次。", focus: ["模块组合", "园区动线", "空间层次"] },
   { slug: "tourism-camp", image: "/real-gallery/project-tourism-camp.png", mobileImage: "/real-gallery/project-tourism-camp-mobile.webp", title: "文旅营地空间", tag: "项目空间参考", summary: "用于展示营地单元、公共空间及不同建筑形体的组合关系。", focus: ["营地单元", "公共空间", "形体组合"] },
