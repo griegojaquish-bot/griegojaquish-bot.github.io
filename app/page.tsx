@@ -3,8 +3,9 @@ import "./portal.css";
 import "./portal-extras.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "山江设计与智能应用｜设计深化与 AI 应用" },
+  title: { absolute: "山江设计与智能应用｜设计深化、竣工图出图与 AI 应用" },
   description: "山江设计与智能应用提供设计深化、工程竣工图与蓝图出图、AI 应用三大业务，分别承接工程图纸交付与企业 AI 场景落地。",
+  alternates: { canonical: "/" },
 };
 
 export default function Home() { return <main className="portalHome">

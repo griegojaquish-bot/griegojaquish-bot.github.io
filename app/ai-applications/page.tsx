@@ -4,7 +4,7 @@ import { services } from "../design-data";
 import "../portal.css";
 import "../portal-extras.css";
 
-export const metadata: Metadata = { title: "AI 应用｜AI FDE、网站与小程序开发", description: "AI FDE 业务协同、网站建设、微信小程序开发与 AI 工程图文自动化，按实际任务人工评估。" };
+export const metadata: Metadata = { title: "AI 应用｜AI FDE、网站与小程序开发", description: "AI FDE 业务协同、网站建设、微信小程序开发与 AI 工程图文自动化，按实际任务人工评估。", alternates: { canonical: "/ai-applications" } };
 const aiService = services.find((service) => service.slug === "ai-fde")!;
 const applications = [
   ["企业 AI 智能体与工作流", "当前重点服务。围绕客服、资料、销售、运营或交付等高频任务，搭建可执行、可人工接管、可持续优化的 AI 工作流。", "/services/ai-agent-workflow"],

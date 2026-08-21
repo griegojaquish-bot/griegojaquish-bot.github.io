@@ -1,12 +1,13 @@
-export default function QuoteForm({ variant = "design" }: { variant?: "design" | "ai" }) {
+export default function QuoteForm({ variant = "design" }: { variant?: "design" | "ai" | "asBuilt" }) {
   const isAi = variant === "ai";
+  const isAsBuilt = variant === "asBuilt";
   return (
     <form className="quoteForm" action="https://formsubmit.co/13120056@qq.com" method="POST">
-      <input type="hidden" name="_subject" value={isAi ? "山江 AI 应用：新业务需求" : "山江设计服务：设计与详图需求"} />
+      <input type="hidden" name="_subject" value={isAi ? "山江 AI 应用：新业务需求" : isAsBuilt ? "山江工程竣工图与蓝图出图：新业务需求" : "山江设计服务：设计与详图需求"} />
       <input type="hidden" name="_next" value="https://shanjiang.asia/thanks" />
-      <input type="hidden" name="_url" value={`https://shanjiang.asia/${isAi ? "ai-applications" : "design-detailing"}`} />
+      <input type="hidden" name="_url" value={`https://shanjiang.asia/${isAi ? "ai-applications" : isAsBuilt ? "as-built-blueprint" : "design-detailing"}`} />
       <input type="hidden" name="_template" value="table" />
-      <p className="quoteHint">提交后由人工确认工作范围并报价，通常在一个工作日内回复；紧急项目请直接电话或微信联系。提交的信息仅用于本次项目沟通。</p>
+      <p className="quoteHint">提交后由人工确认工作范围并报价，通常在一个工作日内回复；紧急项目请直接电话或微信联系。表单通过 FormSubmit.co 转发至山江指定邮箱，仅用于本次项目沟通。</p>
       <label>
         您的称呼
         <input name="name" required maxLength={80} placeholder="请输入姓名或公司称呼" />
@@ -48,6 +49,7 @@ export default function QuoteForm({ variant = "design" }: { variant?: "design" |
         项目需求
         <textarea name="requirement" required maxLength={2000} placeholder={isAi ? "请说明使用对象、当前流程、主要痛点、现有资料和希望实现的结果" : "请说明项目类型、图纸资料、交付内容、执行标准和目标交期"} />
       </label>
+      <label className="privacyConsent"><input type="checkbox" required name="privacyConsent" value="agreed" /> <span>我已阅读并同意<a href="/privacy" target="_blank" rel="noreferrer">隐私说明</a>，同意为本次咨询处理上述信息。</span></label>
       <button type="submit">提交需求，获取人工报价 <b>→</b></button>
     </form>
   );

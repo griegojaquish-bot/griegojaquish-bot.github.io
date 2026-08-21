@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shanjiang.asia"),
   title: {
-    default: "山江设计与智能应用｜设计深化与 AI 应用",
+    default: "山江设计与智能应用｜设计深化、竣工图出图与 AI 应用",
     template: "%s｜山江设计与智能应用",
   },
   description: "山江设计与智能应用提供设计深化、工程竣工图与蓝图出图、AI 应用三类业务，按实际任务范围人工评估与报价。",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     url: "https://shanjiang.asia",
     siteName: "山江设计与智能应用",
-    title: "山江设计与智能应用｜设计深化与 AI 应用",
-    description: "设计深化与 AI 应用两大独立业务板块。",
+    title: "山江设计与智能应用｜设计深化、竣工图出图与 AI 应用",
+    description: "设计深化、工程竣工图与蓝图出图、AI 应用三大独立业务板块。",
   },
   icons: {
     icon: "/favicon.svg",
@@ -58,14 +58,8 @@ export default function RootLayout({
               url: "https://shanjiang.asia",
               telephone: "+86-13539957289",
               email: "13120056@qq.com",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "广州市从化区",
-                addressRegion: "广东省",
-                streetAddress: "太平镇太平村渡头庄14号一楼（自主申报）",
-                addressCountry: "CN",
-              },
-              description: "设计深化与 AI 应用两大独立业务板块，按实际任务范围人工评估。",
+              address: { "@type": "PostalAddress", addressLocality: "广州市从化区", addressRegion: "广东省", addressCountry: "CN" },
+              description: "设计深化、工程竣工图与蓝图出图、AI 应用三大独立业务板块，按实际任务范围人工评估。",
             }),
           }}
         />
